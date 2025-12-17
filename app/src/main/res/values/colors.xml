@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Basic Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary Colors (iOS 매핑) -->
+    <color name="custom_blue">#FF2C80FF</color>
+    <color name="custom_red">#FFFF3A3D</color>
+    <color name="custom_orange">#FFFFA20C</color>
+
+    <!-- Brand Colors -->
+    <color name="primary_blue">#FF2874FF</color>
+    <color name="primary_red">#FFFF1D4E</color>
+
+    <!-- Gray Scale -->
+    <color name="gray1">#FFEFF1F5</color>
+    <color name="gray2">#FFE5EAF0</color>
+    <color name="gray3">#FFCDD3E0</color>
+    <color name="gray4">#FFC4C9D4</color>
+    <color name="gray5">#FFA3A9B5</color>
+    <color name="gray6">#FF6D7A87</color>
+    <color name="gray7">#FF8D99A7</color>
+
+    <!-- Utility Grays -->
+    <color name="gray_7e8994">#FF7E8994</color>
+    <color name="gray_afb5c2">#FFAFB5C2</color>
+    <color name="gray_eeeeee">#FFEEEEEE</color>
+
+    <!-- Background Colors -->
+    <color name="background">#FFF6F8FA</color>
+    <color name="cancel_gray">#FFEFF2F5</color>
+    <color name="placeholder">#FFA0A5AD</color>
+
+    <!-- Line & Border -->
+    <color name="line">#FFF0F2F5</color>
+    <color name="tab_bar_border">#FFF3F5F6</color>
+
+    <!-- Tab Colors -->
+    <color name="tint_tab">#FF333D4B</color>
+    <color name="unselected_tab">#FFA6ACB7</color>
+
+    <!-- Yellow Shades -->
+    <color name="main_yellow">#FFF6D155</color>
+    <color name="kakao_yellow">#FFFFE000</color>
+    <color name="light_yellow">#FFFFFBEE</color>
+
+    <!-- Light Colors -->
+    <color name="light_blue">#FFE2EDFF</color>
+    <color name="light_orange">#FFFFF6E7</color>
+    <color name="light_pink">#FFFFC7BD</color>
+
+    <!-- Status Colors -->
+    <color name="success">#FF4CAF50</color>
+    <color name="error">#FFFF1D4E</color>
+    <color name="warning">#FFFFA20C</color>
+
+    <!-- Transparent Colors -->
+    <color name="black_alpha_50">#80000000</color>
+    <color name="white_alpha_80">#CCFFFFFF</color>
+</resources>
