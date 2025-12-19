@@ -1,161 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="@color/background">
 
     <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="@color/white"
-        android:elevation="0dp"
-        app:layout_constraintTop_toTopOf="parent">
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/white"
+            android:elevation="0dp"
+            app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/btnBack"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="뒤로가기"
-            android:padding="8dp"
-            android:src="@drawable/ic_back"
-            app:tint="@color/black" />
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="뒤로가기"
+                android:padding="8dp"
+                android:src="@drawable/ic_back"
+                app:tint="@color/black"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/pretendard_semibold"
-            android:text="설정"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/pretendard_semibold"
+                android:text="설정"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
 
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:fillViewport="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="15dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
 
             <!-- Account Section -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_rounded_rect"
-                android:orientation="vertical"
-                android:padding="16dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rounded_rect"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
                 <!-- Section Header -->
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_bold"
-                    android:text="계정"
-                    android:textColor="@color/main_yellow"
-                    android:textSize="13sp" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_bold"
+                        android:text="계정"
+                        android:textColor="@color/main_yellow"
+                        android:textSize="13sp"/>
 
                 <!-- Edit Profile -->
                 <LinearLayout
-                    android:id="@+id/menuEditProfile"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="12dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                        android:id="@+id/menuEditProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
                     <FrameLayout
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:background="@drawable/bg_circle_gray">
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/bg_circle_gray">
 
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="edit"
-                            android:src="@drawable/ic_edit"
-                            app:tint="@color/gray_600" />
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="edit"
+                                android:src="@drawable/ic_edit"
+                                app:tint="@color/gray_600"/>
 
                     </FrameLayout>
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:text="프로필 편집"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:text="프로필 편집"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"/>
 
                     <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:contentDescription="arrow"
-                        android:src="@drawable/ic_arrow_right"
-                        app:tint="@color/gray_400" />
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="arrow"
+                            android:src="@drawable/ic_arrow_right"
+                            app:tint="@color/gray_400"/>
 
                 </LinearLayout>
 
                 <!-- Divider -->
                 <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginStart="48dp"
-                    android:background="@color/gray_200" />
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="48dp"
+                        android:background="@color/gray_200"/>
 
                 <!-- Change Password -->
                 <LinearLayout
-                    android:id="@+id/menuChangePassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                        android:id="@+id/menuChangePassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
                     <FrameLayout
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:background="@drawable/bg_circle_gray">
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/bg_circle_gray">
 
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="password"
-                            android:src="@drawable/ic_settings"
-                            app:tint="@color/gray_600" />
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="password"
+                                android:src="@drawable/ic_settings"
+                                app:tint="@color/gray_600"/>
 
                     </FrameLayout>
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:text="비밀번호 변경"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:text="비밀번호 변경"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"/>
 
                     <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:contentDescription="arrow"
-                        android:src="@drawable/ic_arrow_right"
-                        app:tint="@color/gray_400" />
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="arrow"
+                            android:src="@drawable/ic_arrow_right"
+                            app:tint="@color/gray_400"/>
 
                 </LinearLayout>
 
@@ -163,111 +163,111 @@
 
             <!-- Notification Section -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/bg_rounded_rect"
-                android:orientation="vertical"
-                android:padding="16dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_rounded_rect"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
                 <!-- Section Header -->
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_bold"
-                    android:text="알림"
-                    android:textColor="@color/main_yellow"
-                    android:textSize="13sp" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_bold"
+                        android:text="알림"
+                        android:textColor="@color/main_yellow"
+                        android:textSize="13sp"/>
 
                 <!-- Push Notification -->
                 <LinearLayout
-                    android:id="@+id/menuPushNotification"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="12dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                        android:id="@+id/menuPushNotification"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
                     <FrameLayout
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:background="@drawable/bg_circle_gray">
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/bg_circle_gray">
 
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="notification"
-                            android:src="@drawable/ic_notice"
-                            app:tint="@color/gray_600" />
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="notification"
+                                android:src="@drawable/ic_notice"
+                                app:tint="@color/gray_600"/>
 
                     </FrameLayout>
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:text="푸시 알림"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:text="푸시 알림"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"/>
 
                     <androidx.appcompat.widget.SwitchCompat
-                        android:id="@+id/switchPush"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:thumbTint="@color/white"
-                        app:trackTint="@color/main_yellow" />
+                            android:id="@+id/switchPush"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:thumbTint="@color/white"
+                            app:trackTint="@color/main_yellow"/>
 
                 </LinearLayout>
 
                 <!-- Divider -->
                 <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginStart="48dp"
-                    android:background="@color/gray_200" />
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="48dp"
+                        android:background="@color/gray_200"/>
 
                 <!-- Marketing Notification -->
                 <LinearLayout
-                    android:id="@+id/menuMarketingNotification"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                        android:id="@+id/menuMarketingNotification"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
                     <FrameLayout
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:background="@drawable/bg_circle_gray">
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/bg_circle_gray">
 
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="marketing"
-                            android:src="@drawable/ic_docs"
-                            app:tint="@color/gray_600" />
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="marketing"
+                                android:src="@drawable/ic_docs"
+                                app:tint="@color/gray_600"/>
 
                     </FrameLayout>
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:text="마케팅 수신 동의"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:text="마케팅 수신 동의"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"/>
 
                     <androidx.appcompat.widget.SwitchCompat
-                        android:id="@+id/switchMarketing"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:thumbTint="@color/white"
-                        app:trackTint="@color/main_yellow" />
+                            android:id="@+id/switchMarketing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:thumbTint="@color/white"
+                            app:trackTint="@color/main_yellow"/>
 
                 </LinearLayout>
 
@@ -275,113 +275,113 @@
 
             <!-- Other Section -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/bg_rounded_rect"
-                android:orientation="vertical"
-                android:padding="16dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_rounded_rect"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
                 <!-- Section Header -->
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_bold"
-                    android:text="기타"
-                    android:textColor="@color/main_yellow"
-                    android:textSize="13sp" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_bold"
+                        android:text="기타"
+                        android:textColor="@color/main_yellow"
+                        android:textSize="13sp"/>
 
                 <!-- Logout -->
                 <LinearLayout
-                    android:id="@+id/menuLogout"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="12dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                        android:id="@+id/menuLogout"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
                     <FrameLayout
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:background="@drawable/bg_circle_gray">
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/bg_circle_gray">
 
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="logout"
-                            android:src="@drawable/ic_back"
-                            app:tint="@color/gray_600" />
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="logout"
+                                android:src="@drawable/ic_back"
+                                app:tint="@color/gray_600"/>
 
                     </FrameLayout>
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:text="로그아웃"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:text="로그아웃"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"/>
 
                     <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:contentDescription="arrow"
-                        android:src="@drawable/ic_arrow_right"
-                        app:tint="@color/gray_400" />
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="arrow"
+                            android:src="@drawable/ic_arrow_right"
+                            app:tint="@color/gray_400"/>
 
                 </LinearLayout>
 
                 <!-- Divider -->
                 <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginStart="48dp"
-                    android:background="@color/gray_200" />
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="48dp"
+                        android:background="@color/gray_200"/>
 
                 <!-- Delete Account -->
                 <LinearLayout
-                    android:id="@+id/menuDeleteAccount"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                        android:id="@+id/menuDeleteAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
                     <FrameLayout
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:background="@drawable/bg_circle_gray">
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/bg_circle_gray">
 
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="delete"
-                            android:src="@drawable/ic_close"
-                            app:tint="@color/error_red" />
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="delete"
+                                android:src="@drawable/ic_close"
+                                app:tint="@color/error_red"/>
 
                     </FrameLayout>
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:text="회원 탈퇴"
-                        android:textColor="@color/error_red"
-                        android:textSize="15sp" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:text="회원 탈퇴"
+                            android:textColor="@color/error_red"
+                            android:textSize="15sp"/>
 
                     <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:contentDescription="arrow"
-                        android:src="@drawable/ic_arrow_right"
-                        app:tint="@color/gray_400" />
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="arrow"
+                            android:src="@drawable/ic_arrow_right"
+                            app:tint="@color/gray_400"/>
 
                 </LinearLayout>
 
@@ -389,14 +389,14 @@
 
             <!-- App Version -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/pretendard"
-                android:text="앱 버전 1.0.0"
-                android:textColor="@color/gray_500"
-                android:textSize="12sp" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/pretendard"
+                    android:text="앱 버전 1.0.0"
+                    android:textColor="@color/gray_500"
+                    android:textSize="12sp"/>
 
         </LinearLayout>
 

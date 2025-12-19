@@ -1,457 +1,457 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="@color/white">
 
     <!-- Top Bar -->
     <ImageView
-        android:id="@+id/ivBack"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="56dp"
-        android:src="@drawable/ic_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="56dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/pretendard_semibold"
-        android:text="프로필 설정"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@id/ivBack"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/ivBack" />
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_semibold"
+            android:text="프로필 설정"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/ivBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivBack"/>
 
     <!-- ScrollView -->
     <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:fillViewport="true"
-        android:scrollbars="none"
-        app:layout_constraintBottom_toTopOf="@id/btnNext"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivBack">
+            android:id="@+id/scrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/btnNext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivBack">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingHorizontal="15dp"
-            android:paddingBottom="20dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="15dp"
+                android:paddingBottom="20dp">
 
             <!-- Title (회원가입 모드에서만 표시) -->
             <TextView
-                android:id="@+id/tvSubtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pretendard_semibold"
-                android:lineSpacingExtra="4dp"
-                android:text="마지막으로\n부가정보를 입력해주세요."
-                android:textColor="@color/black"
-                android:textSize="20sp" />
+                    android:id="@+id/tvSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:lineSpacingExtra="4dp"
+                    android:text="마지막으로\n부가정보를 입력해주세요."
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
 
             <!-- Profile Image -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:gravity="center"
-                android:orientation="vertical">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                 <FrameLayout
-                    android:layout_width="100dp"
-                    android:layout_height="100dp">
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/ivProfile"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/bg_circle_gray"
-                        app:civ_border_color="@color/gray3"
-                        app:civ_border_width="1dp" />
+                            android:id="@+id/ivProfile"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/bg_circle_gray"
+                            app:civ_border_color="@color/gray3"
+                            app:civ_border_width="1dp"/>
 
                     <ImageView
-                        android:id="@+id/ivEditPhoto"
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
-                        android:layout_gravity="end|bottom"
-                        android:src="@drawable/ic_edit_circle" />
+                            android:id="@+id/ivEditPhoto"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="end|bottom"
+                            android:src="@drawable/ic_edit_circle"/>
                 </FrameLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/pretendard_medium"
-                    android:text="프로필 사진"
-                    android:textColor="@color/gray5"
-                    android:textSize="14sp" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/pretendard_medium"
+                        android:text="프로필 사진"
+                        android:textColor="@color/gray5"
+                        android:textSize="14sp"/>
             </LinearLayout>
 
             <!-- Nickname Section -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_semibold"
-                    android:text="닉네임"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:text="닉네임"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/etNickname"
-                        android:layout_width="0dp"
-                        android:layout_height="48dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/bg_auth_text_field"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:hint="닉네임을 입력하세요"
-                        android:inputType="text"
-                        android:maxLength="10"
-                        android:paddingHorizontal="16dp"
-                        android:textColor="@color/black"
-                        android:textColorHint="@color/gray4"
-                        android:textSize="14sp" />
+                            android:id="@+id/etNickname"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_auth_text_field"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:hint="닉네임을 입력하세요"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:paddingHorizontal="16dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray4"
+                            android:textSize="14sp"/>
 
                     <TextView
-                        android:id="@+id/btnCheckNickname"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="8dp"
-                        android:background="@drawable/bg_button_yellow_border"
-                        android:fontFamily="@font/pretendard_semibold"
-                        android:gravity="center"
-                        android:paddingHorizontal="16dp"
-                        android:text="중복확인"
-                        android:textColor="@color/main_yellow"
-                        android:textSize="14sp" />
+                            android:id="@+id/btnCheckNickname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_button_yellow_border"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:gravity="center"
+                            android:paddingHorizontal="16dp"
+                            android:text="중복확인"
+                            android:textColor="@color/main_yellow"
+                            android:textSize="14sp"/>
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/tvNicknameStatus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/pretendard_medium"
-                    android:textSize="12sp"
-                    android:visibility="gone"
-                    tools:text="사용 가능한 닉네임입니다."
-                    tools:textColor="@color/success_green" />
+                        android:id="@+id/tvNicknameStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/pretendard_medium"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        tools:text="사용 가능한 닉네임입니다."
+                        tools:textColor="@color/success_green"/>
             </LinearLayout>
 
             <!-- Gender Section -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_semibold"
-                    android:text="성별"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:text="성별"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/btnGenderMale"
-                        android:layout_width="0dp"
-                        android:layout_height="48dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/bg_auth_text_field"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:gravity="center"
-                        android:text="남성"
-                        android:textColor="@color/gray5"
-                        android:textSize="14sp" />
+                            android:id="@+id/btnGenderMale"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_auth_text_field"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:gravity="center"
+                            android:text="남성"
+                            android:textColor="@color/gray5"
+                            android:textSize="14sp"/>
 
                     <TextView
-                        android:id="@+id/btnGenderFemale"
-                        android:layout_width="0dp"
-                        android:layout_height="48dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/bg_auth_text_field"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:gravity="center"
-                        android:text="여성"
-                        android:textColor="@color/gray5"
-                        android:textSize="14sp" />
+                            android:id="@+id/btnGenderFemale"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_auth_text_field"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:gravity="center"
+                            android:text="여성"
+                            android:textColor="@color/gray5"
+                            android:textSize="14sp"/>
                 </LinearLayout>
             </LinearLayout>
 
             <!-- Region Section -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:orientation="vertical">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_semibold"
-                    android:text="지역"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <FrameLayout
-                    android:id="@+id/btnSelectRegion"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/bg_auth_text_field">
-
-                    <TextView
-                        android:id="@+id/tvRegion"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="16dp"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:text="지역을 선택하세요"
-                        android:textColor="@color/gray4"
-                        android:textSize="14sp" />
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:text="지역"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                <FrameLayout
+                        android:id="@+id/btnSelectRegion"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_auth_text_field">
+
+                    <TextView
+                            android:id="@+id/tvRegion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:text="지역을 선택하세요"
+                            android:textColor="@color/gray4"
+                            android:textSize="14sp"/>
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center_vertical|end"
-                        android:layout_marginEnd="16dp"
-                        android:src="@drawable/ic_arrow_down" />
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_arrow_down"/>
                 </FrameLayout>
             </LinearLayout>
 
             <!-- Genre/Instrument Section (프로필 수정 모드에서만 표시) -->
             <LinearLayout
-                android:id="@+id/layoutGenreSection"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:orientation="vertical"
-                android:visibility="gone"
-                tools:visibility="visible">
+                    android:id="@+id/layoutGenreSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="visible">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_medium"
-                    android:text="선호하는 장르/악기"
-                    android:textColor="@color/gray6"
-                    android:textSize="13sp" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_medium"
+                        android:text="선호하는 장르/악기"
+                        android:textColor="@color/gray6"
+                        android:textSize="13sp"/>
 
                 <!-- 장르 선택 버튼 -->
                 <FrameLayout
-                    android:id="@+id/btnSelectGenres"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/bg_auth_text_field">
+                        android:id="@+id/btnSelectGenres"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_auth_text_field">
 
                     <TextView
-                        android:id="@+id/tvGenres"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="36dp"
-                        android:ellipsize="end"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:maxLines="1"
-                        android:text="장르"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
+                            android:id="@+id/tvGenres"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="36dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:maxLines="1"
+                            android:text="장르"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"/>
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center_vertical|end"
-                        android:layout_marginEnd="16dp"
-                        android:src="@drawable/ic_arrow_down" />
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_arrow_down"/>
                 </FrameLayout>
 
                 <!-- 악기 선택 버튼 -->
                 <FrameLayout
-                    android:id="@+id/btnSelectInstruments"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/bg_auth_text_field">
+                        android:id="@+id/btnSelectInstruments"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_auth_text_field">
 
                     <TextView
-                        android:id="@+id/tvInstruments"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="36dp"
-                        android:ellipsize="end"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:maxLines="1"
-                        android:text="악기"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
+                            android:id="@+id/tvInstruments"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="36dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:maxLines="1"
+                            android:text="악기"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"/>
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center_vertical|end"
-                        android:layout_marginEnd="16dp"
-                        android:src="@drawable/ic_arrow_down" />
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_arrow_down"/>
                 </FrameLayout>
             </LinearLayout>
 
             <!-- Instrument Section은 Genre Section에 통합됨 -->
             <LinearLayout
-                android:id="@+id/layoutInstrumentSection"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="gone" />
+                    android:id="@+id/layoutInstrumentSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"/>
 
             <!-- Introduction Section (프로필 수정 모드에서만 표시) -->
             <LinearLayout
-                android:id="@+id/layoutIntroductionSection"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:orientation="vertical"
-                android:visibility="gone"
-                tools:visibility="visible">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_medium"
-                    android:text="소개 (선택)"
-                    android:textColor="@color/gray6"
-                    android:textSize="13sp" />
-
-                <FrameLayout
+                    android:id="@+id/layoutIntroductionSection"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="visible">
 
-                    <EditText
-                        android:id="@+id/etIntroduction"
-                        android:layout_width="match_parent"
-                        android:layout_height="176dp"
-                        android:background="@drawable/bg_auth_text_field"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:gravity="start|top"
-                        android:hint="자기소개를 작성해주세요."
-                        android:inputType="textMultiLine"
-                        android:maxLength="200"
-                        android:padding="16dp"
-                        android:textColor="@color/black"
-                        android:textColorHint="@color/gray4"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/tvIntroductionCount"
+                <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|end"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="16dp"
-                        android:fontFamily="@font/pretendard"
-                        android:text="0/200"
-                        android:textColor="@color/gray5"
-                        android:textSize="12sp" />
+                        android:fontFamily="@font/pretendard_medium"
+                        android:text="소개 (선택)"
+                        android:textColor="@color/gray6"
+                        android:textSize="13sp"/>
+
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                    <EditText
+                            android:id="@+id/etIntroduction"
+                            android:layout_width="match_parent"
+                            android:layout_height="176dp"
+                            android:background="@drawable/bg_auth_text_field"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:gravity="start|top"
+                            android:hint="자기소개를 작성해주세요."
+                            android:inputType="textMultiLine"
+                            android:maxLength="200"
+                            android:padding="16dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray4"
+                            android:textSize="14sp"/>
+
+                    <TextView
+                            android:id="@+id/tvIntroductionCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|end"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/pretendard"
+                            android:text="0/200"
+                            android:textColor="@color/gray5"
+                            android:textSize="12sp"/>
                 </FrameLayout>
             </LinearLayout>
 
             <!-- Consent Section (채팅 허용, 프로필 공개) -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_semibold"
-                    android:text="설정"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <LinearLayout
-                    android:id="@+id/layoutChattable"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/ivChattable"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_checkbox_unchecked" />
-
-                    <TextView
+                <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:text="채팅 허용"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:text="설정"
                         android:textColor="@color/black"
-                        android:textSize="14sp" />
+                        android:textSize="16sp"/>
+
+                <LinearLayout
+                        android:id="@+id/layoutChattable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:id="@+id/ivChattable"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_checkbox_unchecked"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:text="채팅 허용"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"/>
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/layoutPublicProfile"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                        android:id="@+id/layoutPublicProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/ivPublicProfile"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_checkbox_unchecked" />
+                            android:id="@+id/ivPublicProfile"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_checkbox_unchecked"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:text="프로필 공개"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:text="프로필 공개"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -460,36 +460,36 @@
 
     <!-- Next Button -->
     <TextView
-        android:id="@+id/btnNext"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/bg_confirm_button_disabled"
-        android:enabled="false"
-        android:fontFamily="@font/pretendard_semibold"
-        android:gravity="center"
-        android:text="약관동의하고 회원가입 하기"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/bg_confirm_button_disabled"
+            android:enabled="false"
+            android:fontFamily="@font/pretendard_semibold"
+            android:gravity="center"
+            android:text="약관동의하고 회원가입 하기"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
     <!-- Loading Indicator -->
     <FrameLayout
-        android:id="@+id/loadingView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#80000000"
-        android:clickable="true"
-        android:focusable="true"
-        android:visibility="gone">
+            android:id="@+id/loadingView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone">
 
         <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

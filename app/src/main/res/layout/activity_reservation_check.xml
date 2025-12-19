@@ -1,212 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#80000000">
+                                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                     xmlns:tools="http://schemas.android.com/tools"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="match_parent"
+                                                     android:background="#80000000">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/bottomSheetCard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="8dp"
-        app:shapeAppearanceOverlay="@style/ShapeAppearance.BottomSheet">
+            android:id="@+id/bottomSheetCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.BottomSheet">
 
         <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingBottom="34dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="34dp">
 
                 <!-- Header -->
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="예약정보 확인"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:fontFamily="@font/pretendard_bold"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="예약정보 확인"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/pretendard_bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                     <ImageButton
-                        android:id="@+id/btnClose"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:src="@drawable/ic_close"
-                        android:contentDescription="닫기"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:tint="@color/black" />
+                            android:id="@+id/btnClose"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_close"
+                            android:contentDescription="닫기"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:tint="@color/black"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/gray_200" />
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_200"/>
 
                 <!-- Studio Info -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="16dp"
-                    android:gravity="center_vertical">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
 
                     <ImageView
-                        android:id="@+id/ivStudio"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:scaleType="centerCrop"
-                        android:background="@drawable/bg_rounded_rect"
-                        tools:background="@color/gray_300" />
+                            android:id="@+id/ivStudio"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/bg_rounded_rect"
+                            tools:background="@color/gray_300"/>
 
                     <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:layout_marginStart="15dp">
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="15dp">
 
                         <TextView
-                            android:id="@+id/tvStudioName"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:fontFamily="@font/pretendard_bold"
-                            tools:text="스튜디오 A" />
+                                android:id="@+id/tvStudioName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/pretendard_bold"
+                                tools:text="스튜디오 A"/>
 
                         <TextView
-                            android:id="@+id/tvStudioAddress"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:textColor="@color/gray_600"
-                            android:textSize="13sp"
-                            android:fontFamily="@font/pretendard_medium"
-                            tools:text="서울시 강남구" />
+                                android:id="@+id/tvStudioAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:textColor="@color/gray_600"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/pretendard_medium"
+                                tools:text="서울시 강남구"/>
 
                     </LinearLayout>
 
                 </LinearLayout>
 
                 <View
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:background="@color/gray_100" />
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@color/gray_100"/>
 
                 <!-- Reservation Info Section -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingHorizontal="15dp"
-                    android:paddingTop="20dp">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="15dp"
+                        android:paddingTop="20dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="업체 정보"
-                        android:textColor="@color/black"
-                        android:textSize="15sp"
-                        android:fontFamily="@font/pretendard_bold" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="업체 정보"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/pretendard_bold"/>
 
                     <!-- Date -->
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="15dp">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="15dp">
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="예약 날짜"
-                            android:textColor="@color/gray_600"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/pretendard_medium" />
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="예약 날짜"
+                                android:textColor="@color/gray_600"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/pretendard_medium"/>
 
                         <TextView
-                            android:id="@+id/tvReservationDate"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/pretendard_medium"
-                            tools:text="24.12.18 (수)" />
+                                android:id="@+id/tvReservationDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/pretendard_medium"
+                                tools:text="24.12.18 (수)"/>
 
                     </LinearLayout>
 
                     <!-- Time -->
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="예약 시간"
-                            android:textColor="@color/gray_600"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/pretendard_medium" />
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="예약 시간"
+                                android:textColor="@color/gray_600"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/pretendard_medium"/>
 
                         <TextView
-                            android:id="@+id/tvReservationTime"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/pretendard_medium"
-                            tools:text="14:00 ~ 16:00 (총 2시간)" />
+                                android:id="@+id/tvReservationTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/pretendard_medium"
+                                tools:text="14:00 ~ 16:00 (총 2시간)"/>
 
                     </LinearLayout>
 
                     <!-- Product Options -->
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="상품 옵션"
-                            android:textColor="@color/gray_600"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/pretendard_medium" />
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="상품 옵션"
+                                android:textColor="@color/gray_600"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/pretendard_medium"/>
 
                         <TextView
-                            android:id="@+id/tvProductOptions"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/pretendard_medium"
-                            tools:text="없음" />
+                                android:id="@+id/tvProductOptions"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/pretendard_medium"
+                                tools:text="없음"/>
 
                     </LinearLayout>
 
@@ -214,71 +214,71 @@
 
                 <!-- Reservist Info Section -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingHorizontal="15dp"
-                    android:paddingTop="30dp">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="15dp"
+                        android:paddingTop="30dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="예약자 정보"
-                        android:textColor="@color/black"
-                        android:textSize="15sp"
-                        android:fontFamily="@font/pretendard_bold" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="예약자 정보"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/pretendard_bold"/>
 
                     <!-- Name -->
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="15dp">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="15dp">
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="이름"
-                            android:textColor="@color/gray_600"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/pretendard_medium" />
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="이름"
+                                android:textColor="@color/gray_600"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/pretendard_medium"/>
 
                         <TextView
-                            android:id="@+id/tvReservistName"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/pretendard_medium"
-                            tools:text="홍길동" />
+                                android:id="@+id/tvReservistName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/pretendard_medium"
+                                tools:text="홍길동"/>
 
                     </LinearLayout>
 
                     <!-- Contact -->
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="연락처"
-                            android:textColor="@color/gray_600"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/pretendard_medium" />
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="연락처"
+                                android:textColor="@color/gray_600"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/pretendard_medium"/>
 
                         <TextView
-                            android:id="@+id/tvReservistContact"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/pretendard_medium"
-                            tools:text="010-1234-5678" />
+                                android:id="@+id/tvReservistContact"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/pretendard_medium"
+                                tools:text="010-1234-5678"/>
 
                     </LinearLayout>
 
@@ -286,71 +286,71 @@
 
                 <!-- Price Section -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingHorizontal="15dp"
-                    android:paddingTop="30dp">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="15dp"
+                        android:paddingTop="30dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="총 가격"
-                        android:textColor="@color/black"
-                        android:textSize="15sp"
-                        android:fontFamily="@font/pretendard_bold" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="총 가격"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/pretendard_bold"/>
 
                     <!-- Room Price -->
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="15dp">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="15dp">
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="공간"
-                            android:textColor="@color/gray_600"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/pretendard_medium" />
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="공간"
+                                android:textColor="@color/gray_600"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/pretendard_medium"/>
 
                         <TextView
-                            android:id="@+id/tvRoomPrice"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/pretendard_medium"
-                            tools:text="50,000원" />
+                                android:id="@+id/tvRoomPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/pretendard_medium"
+                                tools:text="50,000원"/>
 
                     </LinearLayout>
 
                     <!-- Option Price -->
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="옵션"
-                            android:textColor="@color/gray_600"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/pretendard_medium" />
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="옵션"
+                                android:textColor="@color/gray_600"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/pretendard_medium"/>
 
                         <TextView
-                            android:id="@+id/tvOptionPrice"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/pretendard_medium"
-                            tools:text="10,000원" />
+                                android:id="@+id/tvOptionPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/pretendard_medium"
+                                tools:text="10,000원"/>
 
                     </LinearLayout>
 
@@ -358,57 +358,57 @@
 
                 <!-- Separator -->
                 <View
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@color/gray_100" />
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/gray_100"/>
 
                 <!-- Customer Service Section -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="15dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="고객센터"
-                        android:textColor="@color/black"
-                        android:textSize="15sp"
-                        android:fontFamily="@font/pretendard_bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="궁금하신 점이 있으시면 고객센터로 문의해 주세요."
-                        android:textColor="@color/gray_600"
-                        android:textSize="13sp"
-                        android:fontFamily="@font/pretendard_medium" />
-
-                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp">
+                        android:orientation="vertical"
+                        android:padding="15dp">
 
-                        <ImageView
-                            android:layout_width="16dp"
-                            android:layout_height="16dp"
-                            android:src="@drawable/ic_customer_service"
-                            android:layout_gravity="center_vertical"
-                            app:tint="@color/gray_600" />
-
-                        <TextView
-                            android:id="@+id/tvCustomerServicePhone"
+                    <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:text="070-7954-4130"
-                            android:textColor="@color/gray_800"
-                            android:textSize="14sp"
-                            android:fontFamily="@font/pretendard_medium" />
+                            android:text="고객센터"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/pretendard_bold"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="궁금하신 점이 있으시면 고객센터로 문의해 주세요."
+                            android:textColor="@color/gray_600"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/pretendard_medium"/>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+
+                        <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_customer_service"
+                                android:layout_gravity="center_vertical"
+                                app:tint="@color/gray_600"/>
+
+                        <TextView
+                                android:id="@+id/tvCustomerServicePhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="070-7954-4130"
+                                android:textColor="@color/gray_800"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/pretendard_medium"/>
 
                     </LinearLayout>
 
@@ -416,71 +416,71 @@
 
                 <!-- Terms Info Section -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:background="@color/gray_100"
-                    android:padding="15dp">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/gray_100"
+                        android:padding="15dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="위 내용을 확인하였으며, 결제에 동의합니다."
-                        android:textColor="@color/gray_600"
-                        android:textSize="12sp"
-                        android:fontFamily="@font/pretendard_medium" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="위 내용을 확인하였으며, 결제에 동의합니다."
+                            android:textColor="@color/gray_600"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/pretendard_medium"/>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="8dp">
-
-                        <TextView
-                            android:id="@+id/tvTermsLink"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="이용약관"
-                            android:textColor="@color/gray_600"
-                            android:textSize="12sp"
-                            android:fontFamily="@font/pretendard_medium"
-                            android:textStyle="bold" />
+                            android:orientation="horizontal"
+                            android:layout_marginTop="8dp">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="6dp"
-                            android:text="|"
-                            android:textColor="@color/gray_400"
-                            android:textSize="12sp" />
+                                android:id="@+id/tvTermsLink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="이용약관"
+                                android:textColor="@color/gray_600"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:textStyle="bold"/>
 
                         <TextView
-                            android:id="@+id/tvPrivacyLink"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="개인정보 처리방침"
-                            android:textColor="@color/gray_600"
-                            android:textSize="12sp"
-                            android:fontFamily="@font/pretendard_medium"
-                            android:textStyle="bold" />
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="6dp"
+                                android:text="|"
+                                android:textColor="@color/gray_400"
+                                android:textSize="12sp"/>
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="6dp"
-                            android:text="|"
-                            android:textColor="@color/gray_400"
-                            android:textSize="12sp" />
+                                android:id="@+id/tvPrivacyLink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="개인정보 처리방침"
+                                android:textColor="@color/gray_600"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:textStyle="bold"/>
 
                         <TextView
-                            android:id="@+id/tvCancellationLink"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="취소/환불 정책"
-                            android:textColor="@color/gray_600"
-                            android:textSize="12sp"
-                            android:fontFamily="@font/pretendard_medium"
-                            android:textStyle="bold" />
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="6dp"
+                                android:text="|"
+                                android:textColor="@color/gray_400"
+                                android:textSize="12sp"/>
+
+                        <TextView
+                                android:id="@+id/tvCancellationLink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="취소/환불 정책"
+                                android:textColor="@color/gray_600"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:textStyle="bold"/>
 
                     </LinearLayout>
 
@@ -488,17 +488,17 @@
 
                 <!-- Confirm Button -->
                 <Button
-                    android:id="@+id/btnConfirm"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginHorizontal="15dp"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:fontFamily="@font/pretendard_semibold"
-                    app:backgroundTint="@color/main_yellow"
-                    app:cornerRadius="10dp"
-                    tools:text="총 60,000원 결제하기" />
+                        android:id="@+id/btnConfirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/pretendard_semibold"
+                        app:backgroundTint="@color/main_yellow"
+                        app:cornerRadius="10dp"
+                        tools:text="총 60,000원 결제하기"/>
 
             </LinearLayout>
 

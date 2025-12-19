@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background">
+                                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                     xmlns:tools="http://schemas.android.com/tools"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="match_parent"
+                                                     android:background="@color/background">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:elevation="0dp">
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:elevation="0dp">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsingToolbar"
-            android:layout_width="match_parent"
-            android:layout_height="230dp"
-            app:contentScrim="@color/white"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:titleEnabled="false">
+                android:id="@+id/collapsingToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                app:contentScrim="@color/white"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleEnabled="false">
 
             <!-- Image ViewPager -->
             <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/vpImages"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_collapseMode="parallax" />
+                    android:id="@+id/vpImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_collapseMode="parallax"/>
 
             <!-- Image Indicator -->
             <LinearLayout
-                android:id="@+id/layoutIndicator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal" />
+                    android:id="@+id/layoutIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal"/>
 
             <!-- Toolbar with Back Button -->
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin">
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin">
 
                 <ImageButton
-                    android:id="@+id/btnBack"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/bg_circle_white"
-                    android:contentDescription="@string/back"
-                    android:padding="8dp"
-                    android:src="@drawable/ic_back" />
+                        android:id="@+id/btnBack"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_circle_white"
+                        android:contentDescription="@string/back"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_back"/>
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -60,161 +60,161 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="20dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
 
             <!-- ==================== OVERVIEW SECTION ==================== -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:orientation="vertical"
-                android:padding="15dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="15dp">
 
                 <!-- Store Name + Bookmark -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/tvName"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pretendard_semibold"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        tools:text="홍대 댄스아카데미" />
+                            android:id="@+id/tvName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            tools:text="홍대 댄스아카데미"/>
 
                     <ImageView
-                        android:id="@+id/ivBookmark"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_bookmark_empty"
-                        tools:ignore="ContentDescription" />
+                            android:id="@+id/ivBookmark"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_bookmark_empty"
+                            tools:ignore="ContentDescription"/>
 
                 </LinearLayout>
 
                 <!-- Distance + Address Row -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/tvDistance"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:textColor="@color/gray6"
-                        android:textSize="13sp"
-                        android:visibility="gone"
-                        tools:text="1.2km"
-                        tools:visibility="visible" />
+                            android:id="@+id/tvDistance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:textColor="@color/gray6"
+                            android:textSize="13sp"
+                            android:visibility="gone"
+                            tools:text="1.2km"
+                            tools:visibility="visible"/>
 
                     <TextView
-                        android:id="@+id/tvDot"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:text="·"
-                        android:textColor="@color/gray6"
-                        android:textSize="13sp"
-                        android:visibility="gone"
-                        tools:visibility="visible" />
+                            android:id="@+id/tvDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:text="·"
+                            android:textColor="@color/gray6"
+                            android:textSize="13sp"
+                            android:visibility="gone"
+                            tools:visibility="visible"/>
 
                     <TextView
-                        android:id="@+id/tvAddress"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:ellipsize="end"
-                        android:fontFamily="@font/pretendard"
-                        android:maxLines="1"
-                        android:textColor="@color/gray6"
-                        android:textSize="13sp"
-                        tools:text="서울 마포구 양화로 200" />
+                            android:id="@+id/tvAddress"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/pretendard"
+                            android:maxLines="1"
+                            android:textColor="@color/gray6"
+                            android:textSize="13sp"
+                            tools:text="서울 마포구 양화로 200"/>
 
                 </LinearLayout>
 
                 <!-- Description (expandable) -->
                 <TextView
-                    android:id="@+id/tvDescription"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:ellipsize="end"
-                    android:fontFamily="@font/pretendard"
-                    android:lineSpacingExtra="4dp"
-                    android:maxLines="2"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    tools:text="방송댄스 및 K-POP 댄스 전문 스튜디오입니다. 최신 시설과 넓은 공간을 갖추고 있습니다." />
+                        android:id="@+id/tvDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/pretendard"
+                        android:lineSpacingExtra="4dp"
+                        android:maxLines="2"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        tools:text="방송댄스 및 K-POP 댄스 전문 스튜디오입니다. 최신 시설과 넓은 공간을 갖추고 있습니다."/>
 
                 <TextView
-                    android:id="@+id/tvDescriptionMore"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/pretendard_medium"
-                    android:text="더보기"
-                    android:textColor="@color/gray5"
-                    android:textSize="14sp"
-                    android:visibility="gone" />
+                        android:id="@+id/tvDescriptionMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/pretendard_medium"
+                        android:text="더보기"
+                        android:textColor="@color/gray5"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
 
                 <!-- Hashtags/Keywords -->
                 <com.google.android.material.chip.ChipGroup
-                    android:id="@+id/chipGroupKeywords"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:visibility="gone"
-                    app:chipSpacingHorizontal="8dp"
-                    app:chipSpacingVertical="4dp" />
+                        android:id="@+id/chipGroupKeywords"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone"
+                        app:chipSpacingHorizontal="8dp"
+                        app:chipSpacingVertical="4dp"/>
 
                 <!-- Divider -->
                 <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@color/line" />
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/line"/>
 
                 <!-- 이용정책 확인 Button -->
                 <LinearLayout
-                    android:id="@+id/layoutPolicy"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                        android:id="@+id/layoutPolicy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:text="이용정책 확인"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:text="이용정책 확인"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"/>
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:rotation="270"
-                        android:src="@drawable/ic_arrow_down"
-                        tools:ignore="ContentDescription" />
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:rotation="270"
+                            android:src="@drawable/ic_arrow_down"
+                            tools:ignore="ContentDescription"/>
 
                 </LinearLayout>
 
@@ -222,320 +222,320 @@
 
             <!-- Divider (Background Color) -->
             <View
-                android:layout_width="match_parent"
-                android:layout_height="8dp"
-                android:background="@color/background" />
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/background"/>
 
             <!-- ==================== SEGMENTED CONTROL ==================== -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:orientation="vertical">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
 
                 <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tabLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="44dp"
-                    app:tabGravity="fill"
-                    app:tabIndicatorColor="@color/black"
-                    app:tabIndicatorFullWidth="true"
-                    app:tabIndicatorHeight="2dp"
-                    app:tabMode="fixed"
-                    app:tabRippleColor="@android:color/transparent"
-                    app:tabSelectedTextColor="@color/black"
-                    app:tabTextAppearance="@style/TabTextStyle"
-                    app:tabTextColor="@color/gray5" />
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        app:tabGravity="fill"
+                        app:tabIndicatorColor="@color/black"
+                        app:tabIndicatorFullWidth="true"
+                        app:tabIndicatorHeight="2dp"
+                        app:tabMode="fixed"
+                        app:tabRippleColor="@android:color/transparent"
+                        app:tabSelectedTextColor="@color/black"
+                        app:tabTextAppearance="@style/TabTextStyle"
+                        app:tabTextColor="@color/gray5"/>
 
                 <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/line" />
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
 
             </LinearLayout>
 
             <!-- ==================== INFO SECTION (Tab 0) ==================== -->
             <LinearLayout
-                android:id="@+id/layoutInfoSection"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/bg_info_container"
-                android:orientation="vertical"
-                android:padding="15dp">
+                    android:id="@+id/layoutInfoSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_info_container"
+                    android:orientation="vertical"
+                    android:padding="15dp">
 
                 <!-- Header: 기본 정보 -->
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_semibold"
-                    android:text="기본 정보"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:text="기본 정보"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
 
                 <!-- Info Rows Container -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:orientation="vertical">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
 
                     <!-- Operating Hours Row (Room Detail Only) -->
                     <LinearLayout
-                        android:id="@+id/rowOperatingHours"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:visibility="gone">
+                            android:id="@+id/rowOperatingHours"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
 
                         <TextView
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/pretendard_medium"
-                            android:text="영업시간"
-                            android:textColor="@color/gray5"
-                            android:textSize="14sp" />
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:text="영업시간"
+                                android:textColor="@color/gray5"
+                                android:textSize="14sp"/>
 
                         <TextView
-                            android:id="@+id/tvInfoOperatingHours"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/pretendard"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            tools:text="09:00 ~ 22:00" />
+                                android:id="@+id/tvInfoOperatingHours"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/pretendard"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                tools:text="09:00 ~ 22:00"/>
 
                     </LinearLayout>
 
                     <!-- Price Row (Room Detail Only) -->
                     <LinearLayout
-                        android:id="@+id/rowPrice"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:visibility="gone">
+                            android:id="@+id/rowPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:visibility="gone">
 
                         <TextView
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/pretendard_medium"
-                            android:text="이용요금"
-                            android:textColor="@color/gray5"
-                            android:textSize="14sp" />
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:text="이용요금"
+                                android:textColor="@color/gray5"
+                                android:textSize="14sp"/>
 
                         <TextView
-                            android:id="@+id/tvInfoPrice"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/pretendard"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            tools:text="10,000원/시간" />
+                                android:id="@+id/tvInfoPrice"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/pretendard"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                tools:text="10,000원/시간"/>
 
                         <TextView
-                            android:id="@+id/btnPriceDetail"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="상세보기"
-                            android:fontFamily="@font/pretendard_medium"
-                            android:textColor="@color/primary"
-                            android:textSize="13sp"
-                            android:paddingHorizontal="8dp"
-                            android:paddingVertical="4dp" />
+                                android:id="@+id/btnPriceDetail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="상세보기"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:textColor="@color/primary"
+                                android:textSize="13sp"
+                                android:paddingHorizontal="8dp"
+                                android:paddingVertical="4dp"/>
 
                     </LinearLayout>
 
                     <!-- Capacity Row (Room Detail Only) -->
                     <LinearLayout
-                        android:id="@+id/rowCapacity"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal"
-                        android:visibility="gone">
+                            android:id="@+id/rowCapacity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
 
                         <TextView
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/pretendard_medium"
-                            android:text="수용인원"
-                            android:textColor="@color/gray5"
-                            android:textSize="14sp" />
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:text="수용인원"
+                                android:textColor="@color/gray5"
+                                android:textSize="14sp"/>
 
                         <TextView
-                            android:id="@+id/tvInfoCapacity"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/pretendard"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            tools:text="최대 10명" />
+                                android:id="@+id/tvInfoCapacity"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/pretendard"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                tools:text="최대 10명"/>
 
                     </LinearLayout>
 
                     <!-- Address Row -->
                     <LinearLayout
-                        android:id="@+id/rowAddress"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal">
+                            android:id="@+id/rowAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/pretendard_medium"
-                            android:text="주소"
-                            android:textColor="@color/gray5"
-                            android:textSize="14sp" />
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:text="주소"
+                                android:textColor="@color/gray5"
+                                android:textSize="14sp"/>
 
                         <TextView
-                            android:id="@+id/tvInfoAddress"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/pretendard"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            tools:text="서울 마포구 양화로 200 홍대댄스타워" />
+                                android:id="@+id/tvInfoAddress"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/pretendard"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                tools:text="서울 마포구 양화로 200 홍대댄스타워"/>
 
                     </LinearLayout>
 
                     <!-- Directions Row -->
                     <LinearLayout
-                        android:id="@+id/rowDirections"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal"
-                        android:visibility="gone">
+                            android:id="@+id/rowDirections"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
 
                         <TextView
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/pretendard_medium"
-                            android:text="오는 길"
-                            android:textColor="@color/gray5"
-                            android:textSize="14sp" />
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:text="오는 길"
+                                android:textColor="@color/gray5"
+                                android:textSize="14sp"/>
 
                         <TextView
-                            android:id="@+id/tvInfoDirections"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/pretendard"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            tools:text="홍대입구역 9번 출구" />
+                                android:id="@+id/tvInfoDirections"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/pretendard"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                tools:text="홍대입구역 9번 출구"/>
 
                     </LinearLayout>
 
                     <!-- Phone Row -->
                     <LinearLayout
-                        android:id="@+id/rowPhone"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal"
-                        android:visibility="gone">
+                            android:id="@+id/rowPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
 
                         <TextView
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/pretendard_medium"
-                            android:text="전화번호"
-                            android:textColor="@color/gray5"
-                            android:textSize="14sp" />
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:text="전화번호"
+                                android:textColor="@color/gray5"
+                                android:textSize="14sp"/>
 
                         <TextView
-                            android:id="@+id/tvInfoPhone"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/pretendard"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            tools:text="02-999-0000" />
+                                android:id="@+id/tvInfoPhone"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/pretendard"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                tools:text="02-999-0000"/>
 
                         <ImageView
-                            android:id="@+id/btnCopyPhone"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/ic_docs"
-                            tools:ignore="ContentDescription" />
+                                android:id="@+id/btnCopyPhone"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_docs"
+                                tools:ignore="ContentDescription"/>
 
                     </LinearLayout>
 
                     <!-- Parking Row -->
                     <LinearLayout
-                        android:id="@+id/rowParking"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal"
-                        android:visibility="gone">
+                            android:id="@+id/rowParking"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
 
                         <TextView
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/pretendard_medium"
-                            android:text="주차정보"
-                            android:textColor="@color/gray5"
-                            android:textSize="14sp" />
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:text="주차정보"
+                                android:textColor="@color/gray5"
+                                android:textSize="14sp"/>
 
                         <TextView
-                            android:id="@+id/tvInfoParking"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/pretendard"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            tools:text="주차가능 · 무료" />
+                                android:id="@+id/tvInfoParking"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/pretendard"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                tools:text="주차가능 · 무료"/>
 
                     </LinearLayout>
 
                     <!-- Additional Info Row (Website) -->
                     <LinearLayout
-                        android:id="@+id/rowAdditionalInfo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal"
-                        android:visibility="gone">
+                            android:id="@+id/rowAdditionalInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
 
                         <TextView
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/pretendard_medium"
-                            android:text="추가정보"
-                            android:textColor="@color/gray5"
-                            android:textSize="14sp" />
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:text="추가정보"
+                                android:textColor="@color/gray5"
+                                android:textSize="14sp"/>
 
                         <TextView
-                            android:id="@+id/tvInfoAdditional"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/pretendard"
-                            android:textColor="@color/custom_blue"
-                            android:textSize="14sp"
-                            tools:text="https://example.com" />
+                                android:id="@+id/tvInfoAdditional"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/pretendard"
+                                android:textColor="@color/custom_blue"
+                                android:textSize="14sp"
+                                tools:text="https://example.com"/>
 
                     </LinearLayout>
 
@@ -543,20 +543,20 @@
 
                 <!-- Map Placeholder -->
                 <FrameLayout
-                    android:id="@+id/layoutMap"
-                    android:layout_width="match_parent"
-                    android:layout_height="240dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@color/gray1">
+                        android:id="@+id/layoutMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/gray1">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/pretendard"
-                        android:text="지도 영역"
-                        android:textColor="@color/gray5"
-                        android:textSize="14sp" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/pretendard"
+                            android:text="지도 영역"
+                            android:textColor="@color/gray5"
+                            android:textSize="14sp"/>
 
                 </FrameLayout>
 
@@ -564,55 +564,55 @@
 
             <!-- ==================== ROOM INFO SECTION (Place Detail - Tab 1) ==================== -->
             <LinearLayout
-                android:id="@+id/layoutRoomSection"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical"
-                android:paddingHorizontal="15dp"
-                android:visibility="gone">
+                    android:id="@+id/layoutRoomSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="15dp"
+                    android:visibility="gone">
 
                 <!-- Room Header -->
                 <TextView
-                    android:id="@+id/tvRoomHeader"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_semibold"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    tools:text="룸 정보 6" />
+                        android:id="@+id/tvRoomHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:text="룸 정보 6"/>
 
                 <!-- Room List or Empty State -->
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvRooms"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:clipChildren="false"
-                    android:clipToPadding="false"
-                    android:nestedScrollingEnabled="false"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                        android:id="@+id/rvRooms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
                 <!-- Empty State -->
                 <LinearLayout
-                    android:id="@+id/layoutRoomEmpty"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/bg_info_container"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="40dp"
-                    android:visibility="gone">
+                        android:id="@+id/layoutRoomEmpty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/bg_info_container"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="40dp"
+                        android:visibility="gone">
 
                     <TextView
-                        android:id="@+id/tvRoomEmptyMessage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/pretendard"
-                        android:text="등록된 공간이 없습니다."
-                        android:textColor="@color/gray5"
-                        android:textSize="14sp" />
+                            android:id="@+id/tvRoomEmptyMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pretendard"
+                            android:text="등록된 공간이 없습니다."
+                            android:textColor="@color/gray5"
+                            android:textSize="14sp"/>
 
                 </LinearLayout>
 
@@ -620,254 +620,254 @@
 
             <!-- ==================== RESERVATION SECTION (Room Detail - Tab 1) ==================== -->
             <LinearLayout
-                android:id="@+id/layoutReservationSection"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical"
-                android:paddingHorizontal="15dp"
-                android:visibility="gone">
+                    android:id="@+id/layoutReservationSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="15dp"
+                    android:visibility="gone">
 
                 <!-- Header -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pretendard_semibold"
-                        android:text="날짜 선택"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:text="날짜 선택"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"/>
 
                     <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_marginEnd="5dp"
-                        android:src="@drawable/ic_calendar"
-                        tools:ignore="ContentDescription" />
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/ic_calendar"
+                            tools:ignore="ContentDescription"/>
 
                     <TextView
-                        android:id="@+id/tvSelectedDate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:text="날짜를 선택해주세요"
-                        android:textColor="@color/gray5"
-                        android:textSize="15sp" />
+                            android:id="@+id/tvSelectedDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:text="날짜를 선택해주세요"
+                            android:textColor="@color/gray5"
+                            android:textSize="15sp"/>
 
                 </LinearLayout>
 
                 <!-- Divider -->
                 <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@color/line" />
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/line"/>
 
                 <!-- Calendar Header -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/btnPrevMonth"
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="@string/back"
-                        android:rotation="90"
-                        android:src="@drawable/ic_arrow_down" />
+                            android:id="@+id/btnPrevMonth"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/back"
+                            android:rotation="90"
+                            android:src="@drawable/ic_arrow_down"/>
 
                     <TextView
-                        android:id="@+id/tvCalendarMonth"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="20dp"
-                        android:fontFamily="@font/pretendard_semibold"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        tools:text="2025년 1월" />
+                            android:id="@+id/tvCalendarMonth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:text="2025년 1월"/>
 
                     <ImageButton
-                        android:id="@+id/btnNextMonth"
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="@string/back"
-                        android:rotation="270"
-                        android:src="@drawable/ic_arrow_down" />
+                            android:id="@+id/btnNextMonth"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/back"
+                            android:rotation="270"
+                            android:src="@drawable/ic_arrow_down"/>
 
                 </LinearLayout>
 
                 <!-- Weekday Header -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
-                    android:orientation="horizontal">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:gravity="center"
-                        android:text="일"
-                        android:textColor="@color/error_red"
-                        android:textSize="14sp" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:gravity="center"
+                            android:text="일"
+                            android:textColor="@color/error_red"
+                            android:textSize="14sp"/>
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:gravity="center"
-                        android:text="월"
-                        android:textColor="@color/gray5"
-                        android:textSize="14sp" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:gravity="center"
+                            android:text="월"
+                            android:textColor="@color/gray5"
+                            android:textSize="14sp"/>
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:gravity="center"
-                        android:text="화"
-                        android:textColor="@color/gray5"
-                        android:textSize="14sp" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:gravity="center"
+                            android:text="화"
+                            android:textColor="@color/gray5"
+                            android:textSize="14sp"/>
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:gravity="center"
-                        android:text="수"
-                        android:textColor="@color/gray5"
-                        android:textSize="14sp" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:gravity="center"
+                            android:text="수"
+                            android:textColor="@color/gray5"
+                            android:textSize="14sp"/>
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:gravity="center"
-                        android:text="목"
-                        android:textColor="@color/gray5"
-                        android:textSize="14sp" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:gravity="center"
+                            android:text="목"
+                            android:textColor="@color/gray5"
+                            android:textSize="14sp"/>
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:gravity="center"
-                        android:text="금"
-                        android:textColor="@color/gray5"
-                        android:textSize="14sp" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:gravity="center"
+                            android:text="금"
+                            android:textColor="@color/gray5"
+                            android:textSize="14sp"/>
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:gravity="center"
-                        android:text="토"
-                        android:textColor="@color/custom_blue"
-                        android:textSize="14sp" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:gravity="center"
+                            android:text="토"
+                            android:textColor="@color/custom_blue"
+                            android:textSize="14sp"/>
 
                 </LinearLayout>
 
                 <!-- Calendar Grid -->
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvCalendar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:nestedScrollingEnabled="false"
-                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                    app:spanCount="7" />
+                        android:id="@+id/rvCalendar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="7"/>
 
             </LinearLayout>
 
             <!-- ==================== STORE INFO SECTION (Room Detail Only) ==================== -->
             <LinearLayout
-                android:id="@+id/layoutStoreInfoSection"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical"
-                android:paddingHorizontal="15dp"
-                android:visibility="gone">
+                    android:id="@+id/layoutStoreInfoSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="15dp"
+                    android:visibility="gone">
 
                 <!-- Store Info Card (클릭 시 업체 상세로 이동) -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardStoreInfo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardBackgroundColor="@color/gray1"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="0dp">
-
-                    <LinearLayout
+                        android:id="@+id/cardStoreInfo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal"
-                        android:padding="15dp">
+                        app:cardBackgroundColor="@color/gray1"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="15dp">
 
                         <!-- Store Thumbnail -->
                         <ImageView
-                            android:id="@+id/ivStoreThumb"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@drawable/bg_rounded_rect"
-                            android:scaleType="centerCrop"
-                            tools:ignore="ContentDescription" />
+                                android:id="@+id/ivStoreThumb"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/bg_rounded_rect"
+                                android:scaleType="centerCrop"
+                                tools:ignore="ContentDescription"/>
 
                         <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/tvStoreName"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:ellipsize="end"
-                                android:fontFamily="@font/pretendard_semibold"
-                                android:maxLines="1"
-                                android:textColor="@color/black"
-                                android:textSize="15sp"
-                                tools:text="홍대 댄스아카데미" />
+                                    android:id="@+id/tvStoreName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/pretendard_semibold"
+                                    android:maxLines="1"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    tools:text="홍대 댄스아카데미"/>
 
                             <TextView
-                                android:id="@+id/tvStoreRoomCount"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="2dp"
-                                android:fontFamily="@font/pretendard"
-                                android:textColor="@color/gray5"
-                                android:textSize="13sp"
-                                tools:text="공간 6개" />
+                                    android:id="@+id/tvStoreRoomCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="@font/pretendard"
+                                    android:textColor="@color/gray5"
+                                    android:textSize="13sp"
+                                    tools:text="공간 6개"/>
 
                         </LinearLayout>
 
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/ic_arrow_right"
-                            tools:ignore="ContentDescription" />
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_arrow_right"
+                                tools:ignore="ContentDescription"/>
 
                     </LinearLayout>
 
@@ -877,70 +877,70 @@
 
             <!-- ==================== DESCRIPTION SECTION (Room Detail Only) ==================== -->
             <LinearLayout
-                android:id="@+id/layoutDescriptionSection"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical"
-                android:paddingHorizontal="15dp"
-                android:visibility="gone">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_semibold"
-                    android:text="상세정보"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/tvDetailDescription"
+                    android:id="@+id/layoutDescriptionSection"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:fontFamily="@font/pretendard"
-                    android:lineSpacingExtra="4dp"
-                    android:textColor="@color/gray6"
-                    android:textSize="14sp"
-                    tools:text="• 거울벽 설치\n• 음향 시스템 구비\n• 냉난방 완비" />
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="15dp"
+                    android:visibility="gone">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:text="상세정보"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                <TextView
+                        android:id="@+id/tvDetailDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/pretendard"
+                        android:lineSpacingExtra="4dp"
+                        android:textColor="@color/gray6"
+                        android:textSize="14sp"
+                        tools:text="• 거울벽 설치\n• 음향 시스템 구비\n• 냉난방 완비"/>
 
             </LinearLayout>
 
             <!-- ==================== OTHER ROOMS SECTION (Room Detail Only) ==================== -->
             <LinearLayout
-                android:id="@+id/layoutOtherRoomsSection"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical"
-                android:paddingHorizontal="15dp"
-                android:visibility="gone">
-
-                <TextView
-                    android:id="@+id/tvOtherRoomsHeader"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_semibold"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    tools:text="홍대 댄스아카데미의 다른 룸" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvOtherRooms"
+                    android:id="@+id/layoutOtherRoomsSection"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:clipChildren="false"
-                    android:clipToPadding="false"
-                    android:nestedScrollingEnabled="false"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="15dp"
+                    android:visibility="gone">
+
+                <TextView
+                        android:id="@+id/tvOtherRoomsHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:text="홍대 댄스아카데미의 다른 룸"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvOtherRooms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
             </LinearLayout>
 
             <!-- Bottom Spacer -->
             <View
-                android:layout_width="match_parent"
-                android:layout_height="40dp" />
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"/>
 
         </LinearLayout>
 
@@ -949,27 +949,27 @@
     <!-- ==================== BOTTOM RESERVE BUTTON (iOS와 동일하게 제거) ==================== -->
     <!-- iOS는 inline 날짜 선택 섹션을 사용하므로 하단 고정 버튼 없음 -->
     <LinearLayout
-        android:id="@+id/layoutBottomReserve"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="@color/white"
-        android:elevation="8dp"
-        android:orientation="vertical"
-        android:paddingHorizontal="15dp"
-        android:paddingVertical="12dp"
-        android:visibility="gone">
+            android:id="@+id/layoutBottomReserve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:elevation="8dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="12dp"
+            android:visibility="gone">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnReserve"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:fontFamily="@font/pretendard_semibold"
-            android:text="예약하기"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:backgroundTint="@color/main_yellow"
-            app:cornerRadius="10dp" />
+                android:id="@+id/btnReserve"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:text="예약하기"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:backgroundTint="@color/main_yellow"
+                app:cornerRadius="10dp"/>
 
     </LinearLayout>
 
