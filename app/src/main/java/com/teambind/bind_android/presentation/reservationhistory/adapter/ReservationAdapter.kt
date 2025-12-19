@@ -10,7 +10,7 @@ import com.teambind.bind_android.R
 import com.teambind.bind_android.data.model.response.MyReservationDto
 import com.teambind.bind_android.databinding.ItemReservationBinding
 import java.text.NumberFormat
-import java.util.Locale
+import java.util.*
 
 enum class ReservationStatus(val value: String, val displayName: String) {
     PENDING("PENDING", "대기중"),
