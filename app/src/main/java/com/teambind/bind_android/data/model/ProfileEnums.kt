@@ -33,6 +33,7 @@ enum class Genre(val code: Int, val displayName: String, val serverKey: String) 
         fun fromServerKey(serverKey: String): Genre? = entries.find { it.serverKey == serverKey }
         fun getCodesFromServerKeys(serverKeys: List<String>): List<Int> =
             serverKeys.mapNotNull { fromServerKey(it)?.code }
+
         fun getServerKeysFromCodes(codes: List<Int>): List<String> =
             codes.mapNotNull { fromCode(it)?.serverKey }
     }
@@ -62,6 +63,7 @@ enum class Instrument(val code: Int, val displayName: String, val serverKey: Str
         fun fromServerKey(serverKey: String): Instrument? = entries.find { it.serverKey == serverKey }
         fun getCodesFromServerKeys(serverKeys: List<String>): List<Int> =
             serverKeys.mapNotNull { fromServerKey(it)?.code }
+
         fun getServerKeysFromCodes(codes: List<Int>): List<String> =
             codes.mapNotNull { fromCode(it)?.serverKey }
     }
