@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet"
+    android:padding="20dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="이용요금 상세"
+            android:fontFamily="@font/pretendard_bold"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_close"
+            android:contentDescription="@string/close"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <!-- Default Price -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:paddingVertical="12dp"
+        android:background="@drawable/bg_info_container">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="기본 요금"
+            android:fontFamily="@font/pretendard_medium"
+            android:textColor="@color/gray6"
+            android:textSize="14sp"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:id="@+id/tvDefaultPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginEnd="16dp"
+            tools:text="10,000원/시간" />
+
+    </LinearLayout>
+
+    <!-- Time Range Prices Header -->
+    <TextView
+        android:id="@+id/tvTimeRangeHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="시간대별 요금"
+        android:fontFamily="@font/pretendard_bold"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <!-- Time Range Prices List -->
+    <LinearLayout
+        android:id="@+id/layoutTimeRangePrices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp" />
+
+    <!-- No special prices message -->
+    <TextView
+        android:id="@+id/tvNoSpecialPrices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="시간대별 특별 요금이 없습니다.\n기본 요금이 적용됩니다."
+        android:fontFamily="@font/pretendard_medium"
+        android:textColor="@color/gray5"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:visibility="gone" />
+
+</LinearLayout>
