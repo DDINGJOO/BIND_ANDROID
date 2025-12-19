@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.widget.EditText
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
@@ -37,6 +36,7 @@ class ReservationFormActivity : BaseActivity<ActivityReservationFormBinding>() {
                 setResult(Activity.RESULT_OK)
                 finish()
             }
+
             SelectTimeActivity.RESULT_CANCEL_FLOW -> {
                 // 예약 취소 시 Room Detail까지 돌아감
                 setResult(SelectTimeActivity.RESULT_CANCEL_FLOW)
@@ -243,9 +243,11 @@ class ReservationFormActivity : BaseActivity<ActivityReservationFormBinding>() {
                         totalPrice = event.totalPrice
                     )
                 }
+
                 is ReservationFormEvent.NavigateBack -> {
                     finish()
                 }
+
                 is ReservationFormEvent.ShowError -> {
                     showToast(event.message)
                 }

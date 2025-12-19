@@ -6,14 +6,10 @@ import com.teambind.bind_android.data.local.PreferencesManager
 import com.teambind.bind_android.data.model.response.ReservationFieldDto
 import com.teambind.bind_android.data.repository.ReservationRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asSharedFlow
-import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import java.text.NumberFormat
-import java.util.Locale
+import java.util.*
 import javax.inject.Inject
 
 data class ReservationFormUiState(
@@ -54,6 +50,7 @@ sealed class ReservationFormEvent {
         val selectedTimes: List<String>,
         val totalPrice: Int
     ) : ReservationFormEvent()
+
     object NavigateBack : ReservationFormEvent()
     data class ShowError(val message: String) : ReservationFormEvent()
 }
