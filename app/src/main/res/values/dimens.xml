@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common -->
+    <dimen name="spacing_xxs">4dp</dimen>
+    <dimen name="spacing_xs">8dp</dimen>
+    <dimen name="spacing_sm">12dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">20dp</dimen>
+    <dimen name="spacing_xl">24dp</dimen>
+    <dimen name="spacing_xxl">32dp</dimen>
+
+    <!-- Corner Radius -->
+    <dimen name="radius_xs">4dp</dimen>
+    <dimen name="radius_sm">8dp</dimen>
+    <dimen name="radius_md">12dp</dimen>
+    <dimen name="radius_lg">16dp</dimen>
+    <dimen name="radius_xl">20dp</dimen>
+    <dimen name="radius_full">999dp</dimen>
+
+    <!-- Font Size -->
+    <dimen name="text_xs">10sp</dimen>
+    <dimen name="text_sm">12sp</dimen>
+    <dimen name="text_md">14sp</dimen>
+    <dimen name="text_lg">16sp</dimen>
+    <dimen name="text_xl">18sp</dimen>
+    <dimen name="text_xxl">20sp</dimen>
+    <dimen name="text_title">24sp</dimen>
+
+    <!-- Button -->
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="button_height_sm">40dp</dimen>
+    <dimen name="button_radius">8dp</dimen>
+
+    <!-- Input -->
+    <dimen name="input_height">48dp</dimen>
+    <dimen name="input_radius">8dp</dimen>
+
+    <!-- Icon -->
+    <dimen name="icon_xs">16dp</dimen>
+    <dimen name="icon_sm">20dp</dimen>
+    <dimen name="icon_md">24dp</dimen>
+    <dimen name="icon_lg">32dp</dimen>
+    <dimen name="icon_xl">48dp</dimen>
+
+    <!-- Toolbar -->
+    <dimen name="toolbar_height">56dp</dimen>
+
+    <!-- Bottom Navigation -->
+    <dimen name="bottom_nav_height">70dp</dimen>
+
+    <!-- Indicator -->
+    <dimen name="indicator_dot_size">8dp</dimen>
+    <dimen name="indicator_dot_margin">6dp</dimen>
+</resources>
