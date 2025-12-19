@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.teambind.bind_android.presentation.home.HomeFragment"
+        android:label="@string/tab_home" />
+
+    <fragment
+        android:id="@+id/navigation_find"
+        android:name="com.teambind.bind_android.presentation.find.FindFragment"
+        android:label="@string/tab_find" />
+
+    <fragment
+        android:id="@+id/navigation_community"
+        android:name="com.teambind.bind_android.presentation.community.CommunityFragment"
+        android:label="@string/tab_community" />
+
+    <fragment
+        android:id="@+id/navigation_my"
+        android:name="com.teambind.bind_android.presentation.myinfo.MyInfoFragment"
+        android:label="@string/tab_my" />
+
+</navigation>
