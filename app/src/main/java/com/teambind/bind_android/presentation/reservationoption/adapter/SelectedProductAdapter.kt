@@ -8,9 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.teambind.bind_android.databinding.ItemSelectedProductBinding
 import com.teambind.bind_android.presentation.reservationoption.SelectedProduct
 import java.text.NumberFormat
-import java.util.Locale
+import java.util.*
 
-class SelectedProductAdapter : ListAdapter<SelectedProduct, SelectedProductAdapter.SelectedProductViewHolder>(DiffCallback()) {
+class SelectedProductAdapter :
+    ListAdapter<SelectedProduct, SelectedProductAdapter.SelectedProductViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectedProductViewHolder {
         val binding = ItemSelectedProductBinding.inflate(

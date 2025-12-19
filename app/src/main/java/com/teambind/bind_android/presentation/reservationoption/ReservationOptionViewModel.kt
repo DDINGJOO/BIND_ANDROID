@@ -3,18 +3,13 @@ package com.teambind.bind_android.presentation.reservationoption
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.teambind.bind_android.data.model.response.ProductDto
-import com.teambind.bind_android.data.model.response.ReservationPreviewResponse
 import com.teambind.bind_android.data.repository.ProductRepository
 import com.teambind.bind_android.data.repository.ReservationRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asSharedFlow
-import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import java.text.NumberFormat
-import java.util.Locale
+import java.util.*
 import javax.inject.Inject
 
 data class SelectedProduct(
@@ -59,6 +54,7 @@ sealed class ReservationOptionEvent {
         val optionPrice: Int,
         val totalPrice: Int
     ) : ReservationOptionEvent()
+
     object NavigateBack : ReservationOptionEvent()
 }
 

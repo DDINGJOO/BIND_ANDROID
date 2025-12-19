@@ -34,6 +34,7 @@ class ReservationOptionActivity : BaseActivity<ActivityReservationOptionBinding>
                 setResult(Activity.RESULT_OK)
                 finish()
             }
+
             SelectTimeActivity.RESULT_CANCEL_FLOW -> {
                 // 예약 취소 시 Room Detail까지 돌아감
                 setResult(SelectTimeActivity.RESULT_CANCEL_FLOW)
@@ -57,7 +58,17 @@ class ReservationOptionActivity : BaseActivity<ActivityReservationOptionBinding>
         val minUnit = intent.getIntExtra(EXTRA_MIN_UNIT, 60)
         val roomPrice = intent.getIntExtra(EXTRA_ROOM_PRICE, 0)
 
-        viewModel.initialize(reservationId, roomId, placeId, roomName, roomImageUrl, selectedDate, selectedTimes, minUnit, roomPrice)
+        viewModel.initialize(
+            reservationId,
+            roomId,
+            placeId,
+            roomName,
+            roomImageUrl,
+            selectedDate,
+            selectedTimes,
+            minUnit,
+            roomPrice
+        )
 
         setupSelectedProductsRecyclerView()
         setupClickListeners()
@@ -139,6 +150,7 @@ class ReservationOptionActivity : BaseActivity<ActivityReservationOptionBinding>
                 is ReservationOptionEvent.ShowProductSelector -> {
                     showProductSelectorBottomSheet()
                 }
+
                 is ReservationOptionEvent.NavigateToReservationForm -> {
                     ReservationFormActivity.start(
                         launcher = reservationFormLauncher,
@@ -154,6 +166,7 @@ class ReservationOptionActivity : BaseActivity<ActivityReservationOptionBinding>
                         totalPrice = event.totalPrice
                     )
                 }
+
                 is ReservationOptionEvent.NavigateBack -> {
                     finish()
                 }
