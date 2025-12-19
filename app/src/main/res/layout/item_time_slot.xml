@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <LinearLayout
+        android:id="@+id/layoutTimeSlot"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_time_slot_available">
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/pretendard_medium"
+            tools:text="09:00" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="@color/gray_600"
+            android:fontFamily="@font/pretendard_regular"
+            tools:text="10,000원" />
+
+    </LinearLayout>
+
+</FrameLayout>
