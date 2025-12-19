@@ -3,8 +3,7 @@ package com.teambind.bind_android.util.extension
 import android.util.Patterns
 import java.text.DecimalFormat
 import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
+import java.util.*
 import java.util.regex.Pattern
 
 fun String.isValidEmail(): Boolean {
