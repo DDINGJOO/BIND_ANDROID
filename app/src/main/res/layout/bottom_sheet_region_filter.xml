@@ -1,139 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/bg_bottom_sheet"
-    android:orientation="vertical"
-    android:paddingBottom="34dp">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_bottom_sheet"
+              android:orientation="vertical"
+              android:paddingBottom="34dp">
 
     <!-- Handle -->
     <View
-        android:layout_width="40dp"
-        android:layout_height="4dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/bg_rounded_rect" />
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_rounded_rect"/>
 
     <!-- Title -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/pretendard_bold"
-        android:text="지역 선택"
-        android:textColor="@color/black"
-        android:textSize="18sp" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/pretendard_bold"
+            android:text="지역 선택"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
 
     <!-- Region Chips -->
     <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroupRegion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="16dp"
-        app:singleSelection="true">
+            android:id="@+id/chipGroupRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="16dp"
+            app:singleSelection="true">
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipAll"
-            style="@style/FilterChipStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="전체" />
+                android:id="@+id/chipAll"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="전체"/>
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSeoul"
-            style="@style/FilterChipStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="서울" />
+                android:id="@+id/chipSeoul"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="서울"/>
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipGyeonggi"
-            style="@style/FilterChipStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="경기" />
+                android:id="@+id/chipGyeonggi"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="경기"/>
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipIncheon"
-            style="@style/FilterChipStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="인천" />
+                android:id="@+id/chipIncheon"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="인천"/>
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipBusan"
-            style="@style/FilterChipStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="부산" />
+                android:id="@+id/chipBusan"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="부산"/>
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipDaegu"
-            style="@style/FilterChipStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="대구" />
+                android:id="@+id/chipDaegu"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="대구"/>
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipDaejeon"
-            style="@style/FilterChipStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="대전" />
+                android:id="@+id/chipDaejeon"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="대전"/>
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipGwangju"
-            style="@style/FilterChipStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="광주" />
+                android:id="@+id/chipGwangju"
+                style="@style/FilterChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="광주"/>
 
     </com.google.android.material.chip.ChipGroup>
 
     <!-- Separator -->
     <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/gray_200" />
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/gray_200"/>
 
     <!-- Button Row -->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
 
         <!-- Reset Button -->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnReset"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/pretendard_semibold"
-            android:text="초기화"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            app:backgroundTint="@color/cancel_gray"
-            app:cornerRadius="10dp" />
+                android:id="@+id/btnReset"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/pretendard_semibold"
+                android:text="초기화"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:backgroundTint="@color/cancel_gray"
+                app:cornerRadius="10dp"/>
 
         <!-- Apply Button -->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnApply"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_weight="2.5"
-            android:fontFamily="@font/pretendard_semibold"
-            android:text="선택완료"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            app:backgroundTint="@color/main_yellow"
-            app:cornerRadius="10dp" />
+                android:id="@+id/btnApply"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="2.5"
+                android:fontFamily="@font/pretendard_semibold"
+                android:text="선택완료"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:backgroundTint="@color/main_yellow"
+                app:cornerRadius="10dp"/>
 
     </LinearLayout>
 
