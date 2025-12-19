@@ -2,20 +2,9 @@ package com.teambind.bind_android.data.api.service
 
 import com.teambind.bind_android.data.model.request.CreateArticleRequest
 import com.teambind.bind_android.data.model.request.CreateCommentRequest
-import com.teambind.bind_android.data.model.response.ArticlePostResponse
-import com.teambind.bind_android.data.model.response.BaseResponse
-import com.teambind.bind_android.data.model.response.CommunityArticleListResponse
-import com.teambind.bind_android.data.model.response.CommunityDetailResponse
-import com.teambind.bind_android.data.model.response.CreateCommentResponse
-import com.teambind.bind_android.data.model.response.MyFeedResponse
+import com.teambind.bind_android.data.model.response.*
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.DELETE
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.PUT
-import retrofit2.http.Path
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface CommunityService {
 
