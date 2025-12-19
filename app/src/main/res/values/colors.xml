@@ -49,13 +49,36 @@
     <color name="light_blue">#FFE2EDFF</color>
     <color name="light_orange">#FFFFF6E7</color>
     <color name="light_pink">#FFFFC7BD</color>
+    <color name="pastel_orange">#FFFFCC80</color>
+    <color name="pastel_yellow">#FFFFEAA7</color>
 
     <!-- Status Colors -->
     <color name="success">#FF4CAF50</color>
+    <color name="success_green">#FF4CAF50</color>
     <color name="error">#FFFF1D4E</color>
+    <color name="error_red">#FFFF1D4E</color>
     <color name="warning">#FFFFA20C</color>
+    <color name="red">#FFFF0000</color>
 
     <!-- Transparent Colors -->
     <color name="black_alpha_50">#80000000</color>
     <color name="white_alpha_80">#CCFFFFFF</color>
+
+    <!-- Numbered Gray Scale -->
+    <color name="gray_50">#FFFAFBFC</color>
+    <color name="gray_100">#FFF7F8FA</color>
+    <color name="gray_200">#FFEFF1F5</color>
+    <color name="gray_300">#FFE5E8EB</color>
+    <color name="gray_400">#FFD1D5DB</color>
+    <color name="gray_500">#FF9CA3AF</color>
+    <color name="gray_600">#FF6B7280</color>
+    <color name="gray_700">#FF4B5563</color>
+    <color name="gray_800">#FF374151</color>
+    <color name="gray_900">#FF1F2937</color>
+
+    <!-- Primary Yellow -->
+    <color name="primary_yellow">#FFF6D155</color>
+
+    <!-- Primary -->
+    <color name="primary">#FF2874FF</color>
 </resources>
