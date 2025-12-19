@@ -147,10 +147,12 @@ class ReservationDetailActivity : BaseActivity<ActivityReservationDetailBinding>
                 is ReservationDetailEvent.ShowMessage -> {
                     showToast(event.message)
                 }
+
                 is ReservationDetailEvent.NavigateBack -> {
                     setResult(Activity.RESULT_OK)
                     finish()
                 }
+
                 is ReservationDetailEvent.RefreshList -> {
                     // Result OK will trigger list refresh
                 }
