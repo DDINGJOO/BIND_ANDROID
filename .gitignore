@@ -7,9 +7,22 @@
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+/.idea/deploymentTargetSelector.xml
+/.idea/gradle.xml
+/.idea/misc.xml
+/.idea/runConfigurations.xml
 .DS_Store
 /build
 /captures
 .externalNativeBuild
 .cxx
 local.properties
+.kotlin/
+
+# Sensitive files (서버 IP, API 키 등)
+app/src/main/java/com/teambind/bind_android/util/Constants.kt
+app/src/main/res/xml/network_security_config.xml
+
+# Build config
+gradle/libs.versions.toml
+app/build.gradle.kts
