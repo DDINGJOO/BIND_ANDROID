@@ -11,7 +11,7 @@ import com.teambind.bind_android.R
 import com.teambind.bind_android.data.model.response.RoomDetailResponse
 import com.teambind.bind_android.databinding.ItemRoomBinding
 import java.text.NumberFormat
-import java.util.Locale
+import java.util.*
 
 class RoomAdapter(
     private val onItemClick: (RoomDetailResponse) -> Unit

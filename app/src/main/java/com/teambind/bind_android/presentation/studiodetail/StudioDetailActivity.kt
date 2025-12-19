@@ -15,8 +15,8 @@ import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import com.google.android.material.chip.Chip
 import com.google.android.material.tabs.TabLayout
-import com.teambind.bind_android.R
 import com.google.gson.Gson
+import com.teambind.bind_android.R
 import com.teambind.bind_android.data.model.response.PlaceDetailDto
 import com.teambind.bind_android.data.model.response.PricingPolicyDto
 import com.teambind.bind_android.data.model.response.RoomDetailDto
@@ -36,7 +36,7 @@ import java.time.LocalDate
 import java.time.YearMonth
 import java.time.format.DateTimeFormatter
 import java.time.format.TextStyle
-import java.util.Locale
+import java.util.*
 
 @AndroidEntryPoint
 class StudioDetailActivity : BaseActivity<ActivityStudioDetailBinding>() {
@@ -116,6 +116,7 @@ class StudioDetailActivity : BaseActivity<ActivityStudioDetailBinding>() {
                     viewModel.loadRoomDetail(currentRoomId)
                 }
             }
+
             currentRoomId > 0 -> viewModel.loadRoomDetail(currentRoomId)
             currentPlaceId.isNotEmpty() -> viewModel.loadPlaceDetail(currentPlaceId)
             else -> {
@@ -160,6 +161,7 @@ class StudioDetailActivity : BaseActivity<ActivityStudioDetailBinding>() {
                     currentTabIndex = tab?.position ?: 0
                     updateSectionVisibility()
                 }
+
                 override fun onTabUnselected(tab: TabLayout.Tab?) {}
                 override fun onTabReselected(tab: TabLayout.Tab?) {}
             })
@@ -180,6 +182,7 @@ class StudioDetailActivity : BaseActivity<ActivityStudioDetailBinding>() {
                         layoutReservationSection.visibility = View.GONE
                         layoutRoomSection.visibility = View.GONE
                     }
+
                     1 -> {
                         // 예약하기 탭: 달력
                         layoutInfoSection.visibility = View.GONE
@@ -202,6 +205,7 @@ class StudioDetailActivity : BaseActivity<ActivityStudioDetailBinding>() {
                         layoutDescriptionSection.visibility = View.GONE
                         layoutOtherRoomsSection.visibility = View.GONE
                     }
+
                     1 -> {
                         // 룸 정보 탭
                         layoutInfoSection.visibility = View.GONE
@@ -381,6 +385,7 @@ class StudioDetailActivity : BaseActivity<ActivityStudioDetailBinding>() {
                 state.room != null && state.place != null -> {
                     updateRoomInfo(state.room, state.place, state.pricingPolicy)
                 }
+
                 state.place != null -> {
                     updatePlaceOnlyInfo(state.place, state.roomLoadFailed)
                 }

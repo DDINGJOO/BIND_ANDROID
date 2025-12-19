@@ -4,14 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.teambind.bind_android.R
 import com.teambind.bind_android.data.model.response.PricingPolicyDto
 import com.teambind.bind_android.databinding.BottomSheetPriceDetailBinding
 import java.text.NumberFormat
-import java.util.Locale
+import java.util.*
 
 class PriceDetailBottomSheet : BottomSheetDialogFragment() {
 

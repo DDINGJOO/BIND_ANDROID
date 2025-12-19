@@ -14,7 +14,7 @@ import com.teambind.bind_android.databinding.ItemCalendarDayBinding
 import java.time.LocalDate
 import java.time.YearMonth
 import java.time.format.DateTimeFormatter
-import java.util.Locale
+import java.util.*
 
 class DatePickerBottomSheet : BottomSheetDialogFragment() {
 
@@ -160,6 +160,7 @@ class DatePickerBottomSheet : BottomSheetDialogFragment() {
                         itemBinding.tvDay.background = null
                         itemBinding.root.isClickable = false
                     }
+
                     is CalendarDay.Day -> {
                         itemBinding.tvDay.text = calendarDay.dayOfMonth.toString()
 
@@ -168,9 +169,11 @@ class DatePickerBottomSheet : BottomSheetDialogFragment() {
                             calendarDay.isSelected -> {
                                 itemBinding.tvDay.setBackgroundResource(R.drawable.bg_calendar_selected)
                             }
+
                             calendarDay.isToday -> {
                                 itemBinding.tvDay.setBackgroundResource(R.drawable.bg_calendar_today)
                             }
+
                             else -> {
                                 itemBinding.tvDay.background = null
                             }

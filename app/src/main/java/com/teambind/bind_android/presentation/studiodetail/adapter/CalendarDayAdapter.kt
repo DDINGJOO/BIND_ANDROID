@@ -52,18 +52,22 @@ class CalendarDayAdapter(
                     tvDay.setBackgroundResource(R.drawable.bg_calendar_selected)
                     tvDay.setTextColor(ContextCompat.getColor(itemView.context, R.color.white))
                 }
+
                 day.isToday -> {
                     tvDay.setBackgroundResource(R.drawable.bg_calendar_today)
                     tvDay.setTextColor(ContextCompat.getColor(itemView.context, R.color.main_yellow))
                 }
+
                 day.isPastDate -> {
                     tvDay.background = null
                     tvDay.setTextColor(ContextCompat.getColor(itemView.context, R.color.gray3))
                 }
+
                 !day.isCurrentMonth -> {
                     tvDay.background = null
                     tvDay.setTextColor(ContextCompat.getColor(itemView.context, R.color.gray3))
                 }
+
                 else -> {
                     tvDay.background = null
                     // 일요일(0), 토요일(6)

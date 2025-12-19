@@ -2,16 +2,11 @@ package com.teambind.bind_android.presentation.studiodetail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.teambind.bind_android.data.model.response.PlaceDetailDto
-import com.teambind.bind_android.data.model.response.PricingPolicyDto
-import com.teambind.bind_android.data.model.response.ProductDto
-import com.teambind.bind_android.data.model.response.RoomDetailDto
-import com.teambind.bind_android.data.model.response.RoomDetailResponse
-import com.teambind.bind_android.data.model.response.RoomDto
+import com.teambind.bind_android.data.model.response.*
 import com.teambind.bind_android.data.repository.StudioRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
