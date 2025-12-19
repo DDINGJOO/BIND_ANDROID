@@ -11,7 +11,6 @@ import android.widget.FrameLayout
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.teambind.bind_android.R
 import com.teambind.bind_android.data.model.request.ArticleReportCategory
 import com.teambind.bind_android.databinding.BottomSheetReportBinding
 
