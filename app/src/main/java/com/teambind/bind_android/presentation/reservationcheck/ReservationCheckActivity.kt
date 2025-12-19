@@ -29,6 +29,7 @@ class ReservationCheckActivity : BaseActivity<ActivityReservationCheckBinding>()
                 setResult(Activity.RESULT_OK)
                 finish()
             }
+
             SelectTimeActivity.RESULT_CANCEL_FLOW -> {
                 // 예약 취소 시 Room Detail까지 돌아감
                 setResult(SelectTimeActivity.RESULT_CANCEL_FLOW)
@@ -142,9 +143,11 @@ class ReservationCheckActivity : BaseActivity<ActivityReservationCheckBinding>()
                         totalPrice = event.totalPrice
                     )
                 }
+
                 is ReservationCheckEvent.Dismiss -> {
                     finish()
                 }
+
                 is ReservationCheckEvent.ShowError -> {
                     showToast(event.message)
                 }
