@@ -12,7 +12,6 @@ import com.teambind.bind_android.presentation.customerservice.CustomerServiceAct
 import com.teambind.bind_android.presentation.minifeed.MiniFeedActivity
 import com.teambind.bind_android.presentation.myposts.MyPostsActivity
 import com.teambind.bind_android.presentation.noticeevent.NoticeEventActivity
-import com.teambind.bind_android.presentation.paymenthistory.PaymentHistoryActivity
 import com.teambind.bind_android.presentation.reservationhistory.ReservationHistoryActivity
 import com.teambind.bind_android.presentation.settings.SettingsActivity
 import com.teambind.bind_android.presentation.start.auth.AuthMainActivity
