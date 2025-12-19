@@ -7,11 +7,7 @@ import com.teambind.bind_android.databinding.ActivityLoginBinding
 import com.teambind.bind_android.presentation.base.BaseActivity
 import com.teambind.bind_android.presentation.main.MainActivity
 import com.teambind.bind_android.presentation.start.profilesetting.ProfileSettingActivity
-import com.teambind.bind_android.util.extension.collectLatestFlow
-import com.teambind.bind_android.util.extension.gone
-import com.teambind.bind_android.util.extension.setOnSingleClickListener
-import com.teambind.bind_android.util.extension.startActivityClearTask
-import com.teambind.bind_android.util.extension.visible
+import com.teambind.bind_android.util.extension.*
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -35,9 +31,11 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
                 is LoginState.Idle -> {
                     binding.loadingOverlay.gone()
                 }
+
                 is LoginState.Loading -> {
                     binding.loadingOverlay.visible()
                 }
+
                 is LoginState.Success -> {
                     binding.loadingOverlay.gone()
                     if (state.hasProfile) {
@@ -46,6 +44,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
                         startActivityClearTask<ProfileSettingActivity>()
                     }
                 }
+
                 is LoginState.Error -> {
                     binding.loadingOverlay.gone()
                     showToast(state.message)

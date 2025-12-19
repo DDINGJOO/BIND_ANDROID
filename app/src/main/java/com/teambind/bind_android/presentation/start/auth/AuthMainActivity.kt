@@ -2,7 +2,6 @@ package com.teambind.bind_android.presentation.start.auth
 
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.lifecycleScope
@@ -10,8 +9,8 @@ import com.teambind.bind_android.R
 import com.teambind.bind_android.databinding.ActivityAuthMainBinding
 import com.teambind.bind_android.presentation.base.BaseActivity
 import com.teambind.bind_android.presentation.main.MainActivity
-import com.teambind.bind_android.presentation.start.findpassword.FindPasswordActivity
 import com.teambind.bind_android.presentation.start.emailauth.EmailAuthActivity
+import com.teambind.bind_android.presentation.start.findpassword.FindPasswordActivity
 import com.teambind.bind_android.util.extension.setOnSingleClickListener
 import com.teambind.bind_android.util.extension.startActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -93,16 +92,19 @@ class AuthMainActivity : BaseActivity<ActivityAuthMainBinding>() {
                         // 로딩 표시
                         binding.btnLogin.isEnabled = false
                     }
+
                     is AuthMainViewModel.LoginState.Success -> {
                         binding.btnLogin.isEnabled = true
                         // 메인 화면으로 이동
                         startActivity<MainActivity>()
                         finishAffinity()
                     }
+
                     is AuthMainViewModel.LoginState.Error -> {
                         binding.btnLogin.isEnabled = true
                         showAlertMessage(state.message)
                     }
+
                     is AuthMainViewModel.LoginState.Idle -> {
                         binding.btnLogin.isEnabled = true
                     }

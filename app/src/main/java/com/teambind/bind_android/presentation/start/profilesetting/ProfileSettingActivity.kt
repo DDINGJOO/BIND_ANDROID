@@ -79,6 +79,7 @@ class ProfileSettingActivity : AppCompatActivity() {
                 binding.layoutInstrumentSection.visibility = View.GONE
                 binding.layoutIntroductionSection.visibility = View.GONE
             }
+
             ProfileSettingType.EDIT -> {
                 binding.tvTitle.visibility = View.VISIBLE
                 binding.tvTitle.text = "프로필 수정"
@@ -272,6 +273,7 @@ class ProfileSettingActivity : AppCompatActivity() {
                         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                         startActivity(intent)
                     }
+
                     ProfileSettingType.EDIT -> {
                         // 수정 완료
                         Toast.makeText(this, "프로필이 수정되었습니다.", Toast.LENGTH_SHORT).show()
@@ -312,9 +314,11 @@ class ProfileSettingActivity : AppCompatActivity() {
             true -> {
                 binding.tvNicknameStatus.setTextColor(ContextCompat.getColor(this, R.color.success_green))
             }
+
             false -> {
                 binding.tvNicknameStatus.setTextColor(ContextCompat.getColor(this, R.color.error_red))
             }
+
             null -> {
                 binding.tvNicknameStatus.visibility = View.GONE
             }

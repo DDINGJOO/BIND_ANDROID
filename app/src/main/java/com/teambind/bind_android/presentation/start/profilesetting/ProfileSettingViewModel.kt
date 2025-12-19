@@ -259,6 +259,7 @@ class ProfileSettingViewModel @Inject constructor(
                     )
                     profileRepository.createProfile(request)
                 }
+
                 ProfileSettingType.EDIT -> {
                     // 기존 프로필 수정
                     // 닉네임이 원본과 같으면 null로 전송 (서버에서 무시)

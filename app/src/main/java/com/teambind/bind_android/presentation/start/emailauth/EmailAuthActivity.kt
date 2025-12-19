@@ -3,18 +3,13 @@ package com.teambind.bind_android.presentation.start.emailauth
 import android.content.Intent
 import android.os.CountDownTimer
 import android.view.LayoutInflater
-import android.view.View
 import androidx.activity.viewModels
 import androidx.core.widget.doAfterTextChanged
 import com.teambind.bind_android.R
 import com.teambind.bind_android.databinding.ActivityEmailAuthBinding
 import com.teambind.bind_android.presentation.base.BaseActivity
 import com.teambind.bind_android.presentation.start.signup.SignUpActivity
-import com.teambind.bind_android.util.extension.collectLatestFlow
-import com.teambind.bind_android.util.extension.gone
-import com.teambind.bind_android.util.extension.isValidEmail
-import com.teambind.bind_android.util.extension.setOnSingleClickListener
-import com.teambind.bind_android.util.extension.visible
+import com.teambind.bind_android.util.extension.*
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -40,6 +35,7 @@ class EmailAuthActivity : BaseActivity<ActivityEmailAuthBinding>() {
                 is EmailAuthState.Idle -> {
                     // 초기 상태
                 }
+
                 is EmailAuthState.CodeSent -> {
                     // 인증 코드 발송됨
                     with(binding) {
@@ -51,15 +47,18 @@ class EmailAuthActivity : BaseActivity<ActivityEmailAuthBinding>() {
                     }
                     startTimer()
                 }
+
                 is EmailAuthState.CodeVerified -> {
                     // 인증 성공
                     shouldShowAlert = false
                     stopTimer()
                     navigateToSignUp()
                 }
+
                 is EmailAuthState.Error -> {
                     showAlertMessage(state.message)
                 }
+
                 is EmailAuthState.Loading -> {
                     // 로딩 중
                 }

@@ -102,6 +102,7 @@ class SplashActivity : AppCompatActivity() {
                 // 토큰이 있으면 자동 로그인 시도
                 tryAutoLogin()
             }
+
             else -> {
                 // 토큰이 없으면 인증 화면으로
                 navigateToAuth()

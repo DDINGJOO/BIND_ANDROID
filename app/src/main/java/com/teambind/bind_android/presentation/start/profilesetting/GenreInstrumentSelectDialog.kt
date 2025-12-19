@@ -123,6 +123,7 @@ class GenreInstrumentSelectDialog : BottomSheetDialogFragment() {
                 0 -> {
                     holder.recyclerView.adapter = GenreAdapter()
                 }
+
                 1 -> {
                     holder.recyclerView.adapter = InstrumentAdapter()
                 }

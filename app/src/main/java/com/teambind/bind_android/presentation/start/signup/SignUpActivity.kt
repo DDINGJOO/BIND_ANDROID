@@ -62,11 +62,12 @@ class SignUpActivity : BaseActivity<ActivitySignupBinding>() {
                 }
 
                 // Show error icon on password confirm field if not match
-                ivPasswordConfirmError.visibility = if (validation.passwordsMatch || viewModel.passwordConfirm.value.isEmpty()) {
-                    android.view.View.GONE
-                } else {
-                    android.view.View.VISIBLE
-                }
+                ivPasswordConfirmError.visibility =
+                    if (validation.passwordsMatch || viewModel.passwordConfirm.value.isEmpty()) {
+                        android.view.View.GONE
+                    } else {
+                        android.view.View.VISIBLE
+                    }
             }
         }
 
