@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:cardCornerRadius="15dp"
-    app:cardElevation="0dp">
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="match_parent"
+                                   app:cardCornerRadius="15dp"
+                                   app:cardElevation="0dp">
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/banner_home_1">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/banner_home_1">
 
         <!-- Badge -->
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|end"
-            android:layout_margin="12dp"
-            android:background="@drawable/bg_badge_black"
-            android:paddingHorizontal="8dp"
-            android:paddingVertical="4dp"
-            android:text="Music +"
-            android:textColor="@color/white"
-            android:textSize="10sp"
-            android:fontFamily="@font/pretendard_bold" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_margin="12dp"
+                android:background="@drawable/bg_badge_black"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="Music +"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:fontFamily="@font/pretendard_bold"/>
 
         <!-- Text Content -->
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="16dp"
-            android:orientation="vertical">
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="밴드하는 오늘,"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:fontFamily="@font/pretendard_bold" />
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="내일의 뮤직스페이스를 찾아보세요"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:fontFamily="@font/pretendard_bold" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="밴드하는 오늘,"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/pretendard_bold"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="내일의 뮤직스페이스를 찾아보세요"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/pretendard_bold"/>
 
         </LinearLayout>
 

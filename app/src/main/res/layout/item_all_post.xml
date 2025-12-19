@@ -1,200 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingTop="16dp"
-    android:paddingBottom="16dp">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:paddingTop="16dp"
+                                                   android:paddingBottom="16dp">
 
     <!-- Thumbnail Image (Top Right) -->
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardThumbnail"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:visibility="gone"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+            android:id="@+id/cardThumbnail"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:visibility="gone"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
 
         <ImageView
-            android:id="@+id/ivThumbnail"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            tools:ignore="ContentDescription"
-            tools:src="@drawable/ic_launcher_foreground" />
+                android:id="@+id/ivThumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/ic_launcher_foreground"/>
 
     </androidx.cardview.widget.CardView>
 
     <!-- 1. Category Badge (Top) -->
     <TextView
-        android:id="@+id/tvCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/pretendard_medium"
-        android:textColor="@color/gray5"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="자유게시판" />
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_medium"
+            android:textColor="@color/gray5"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="자유게시판"/>
 
     <!-- 2. Title -->
     <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="12dp"
-        android:ellipsize="end"
-        android:fontFamily="@font/pretendard_bold"
-        android:maxLines="1"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@id/cardThumbnail"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvCategory"
-        tools:text="밴드 모집합니다! 기타리스트 구해요" />
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/pretendard_bold"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/cardThumbnail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCategory"
+            tools:text="밴드 모집합니다! 기타리스트 구해요"/>
 
     <!-- 3. Content Preview -->
     <TextView
-        android:id="@+id/tvContent"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="12dp"
-        android:ellipsize="end"
-        android:fontFamily="@font/pretendard_medium"
-        android:maxLines="2"
-        android:textColor="@color/gray6"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toStartOf="@id/cardThumbnail"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"
-        tools:text="안녕하세요! 저희 밴드에서 기타리스트를 구하고 있습니다." />
+            android:id="@+id/tvContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/pretendard_medium"
+            android:maxLines="2"
+            android:textColor="@color/gray6"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@id/cardThumbnail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            tools:text="안녕하세요! 저희 밴드에서 기타리스트를 구하고 있습니다."/>
 
     <!-- 4. Profile + Time + Likes/Comments Row (Bottom) -->
     <LinearLayout
-        android:id="@+id/layoutProfileRow"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="12dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toStartOf="@id/cardThumbnail"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvContent">
+            android:id="@+id/layoutProfileRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/cardThumbnail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvContent">
 
         <!-- Profile Image -->
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/ivProfile"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:src="@drawable/bg_circle_gray"
-            tools:ignore="ContentDescription" />
+                android:id="@+id/ivProfile"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/bg_circle_gray"
+                tools:ignore="ContentDescription"/>
 
         <!-- Author Name -->
         <TextView
-            android:id="@+id/tvAuthor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:fontFamily="@font/pretendard_medium"
-            android:textColor="@color/gray6"
-            android:textSize="12sp"
-            tools:text="밴드맨" />
+                android:id="@+id/tvAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:textColor="@color/gray6"
+                android:textSize="12sp"
+                tools:text="밴드맨"/>
 
         <!-- Dot separator -->
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:text="·"
-            android:textColor="@color/gray5"
-            android:textSize="12sp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="·"
+                android:textColor="@color/gray5"
+                android:textSize="12sp"/>
 
         <!-- Time -->
         <TextView
-            android:id="@+id/tvTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/pretendard_medium"
-            android:textColor="@color/gray6"
-            android:textSize="12sp"
-            tools:text="2시간 전" />
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_medium"
+                android:textColor="@color/gray6"
+                android:textSize="12sp"
+                tools:text="2시간 전"/>
 
         <!-- Spacer -->
         <View
-            android:layout_width="20dp"
-            android:layout_height="1dp" />
+                android:layout_width="20dp"
+                android:layout_height="1dp"/>
 
         <!-- Like Icon -->
         <ImageView
-            android:layout_width="14dp"
-            android:layout_height="14dp"
-            android:src="@drawable/ic_like_small"
-            tools:ignore="ContentDescription" />
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_like_small"
+                tools:ignore="ContentDescription"/>
 
         <!-- Like Count -->
         <TextView
-            android:id="@+id/tvLikeCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:fontFamily="@font/pretendard_medium"
-            android:textColor="@color/gray5"
-            android:textSize="12sp"
-            tools:text="12" />
+                android:id="@+id/tvLikeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:textColor="@color/gray5"
+                android:textSize="12sp"
+                tools:text="12"/>
 
         <!-- Dot separator -->
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:text="·"
-            android:textColor="@color/gray5"
-            android:textSize="12sp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="·"
+                android:textColor="@color/gray5"
+                android:textSize="12sp"/>
 
         <!-- Comment Icon -->
         <ImageView
-            android:layout_width="14dp"
-            android:layout_height="14dp"
-            android:src="@drawable/ic_comment_small"
-            tools:ignore="ContentDescription" />
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_comment_small"
+                tools:ignore="ContentDescription"/>
 
         <!-- Comment Count -->
         <TextView
-            android:id="@+id/tvCommentCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:fontFamily="@font/pretendard_medium"
-            android:textColor="@color/gray5"
-            android:textSize="12sp"
-            tools:text="5" />
+                android:id="@+id/tvCommentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:textColor="@color/gray5"
+                android:textSize="12sp"
+                tools:text="5"/>
 
     </LinearLayout>
 
     <!-- Barrier for bottom layout positioning -->
     <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrierBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="bottom"
-        app:constraint_referenced_ids="layoutProfileRow,cardThumbnail" />
+            android:id="@+id/barrierBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="layoutProfileRow,cardThumbnail"/>
 
     <!-- Divider -->
     <View
-        android:id="@+id/layoutBottomInfo"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/line"
-        app:layout_constraintTop_toBottomOf="@id/barrierBottom" />
+            android:id="@+id/layoutBottomInfo"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/line"
+            app:layout_constraintTop_toBottomOf="@id/barrierBottom"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingHorizontal="16dp"
-    android:paddingVertical="12dp">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:paddingHorizontal="16dp"
+                                                   android:paddingVertical="12dp">
 
     <ImageView
-        android:id="@+id/ivProduct"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:scaleType="centerCrop"
-        android:background="@drawable/bg_rounded_rect"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:background="@color/gray_300" />
+            android:id="@+id/ivProduct"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_rounded_rect"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:background="@color/gray_300"/>
 
     <LinearLayout
-        android:id="@+id/layoutInfo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginStart="12dp"
-        app:layout_constraintStart_toEndOf="@id/ivProduct"
-        app:layout_constraintEnd_toStartOf="@id/layoutQuantity"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+            android:id="@+id/layoutInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@id/ivProduct"
+            app:layout_constraintEnd_toStartOf="@id/layoutQuantity"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
-            android:id="@+id/tvProductName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            android:fontFamily="@font/pretendard_semibold"
-            android:ellipsize="end"
-            android:maxLines="1"
-            tools:text="음료 패키지" />
+                android:id="@+id/tvProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:text="음료 패키지"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:id="@+id/tvProductPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/gray_600"
-                android:textSize="13sp"
-                android:fontFamily="@font/pretendard_medium"
-                tools:text="10,000원" />
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
             <TextView
-                android:id="@+id/tvProductStock"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:textColor="@color/error_red"
-                android:textSize="12sp"
-                android:fontFamily="@font/pretendard_medium"
-                tools:text="(재고 5개)" />
+                    android:id="@+id/tvProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_600"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/pretendard_medium"
+                    tools:text="10,000원"/>
+
+            <TextView
+                    android:id="@+id/tvProductStock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/error_red"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/pretendard_medium"
+                    tools:text="(재고 5개)"/>
 
         </LinearLayout>
 
@@ -72,44 +72,44 @@
 
     <!-- Quantity Control -->
     <LinearLayout
-        android:id="@+id/layoutQuantity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+            android:id="@+id/layoutQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
-            android:id="@+id/btnMinus"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:background="@drawable/bg_circle_gray"
-            android:src="@drawable/ic_minus"
-            android:scaleType="center"
-            android:contentDescription="감소"
-            app:tint="@color/gray_600" />
+                android:id="@+id/btnMinus"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_circle_gray"
+                android:src="@drawable/ic_minus"
+                android:scaleType="center"
+                android:contentDescription="감소"
+                app:tint="@color/gray_600"/>
 
         <TextView
-            android:id="@+id/tvQuantity"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            android:fontFamily="@font/pretendard_medium"
-            tools:text="0" />
+                android:id="@+id/tvQuantity"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/pretendard_medium"
+                tools:text="0"/>
 
         <ImageButton
-            android:id="@+id/btnPlus"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:background="@drawable/bg_circle_gray"
-            android:src="@drawable/ic_plus"
-            android:scaleType="center"
-            android:contentDescription="증가"
-            app:tint="@color/gray_600" />
+                android:id="@+id/btnPlus"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_circle_gray"
+                android:src="@drawable/ic_plus"
+                android:scaleType="center"
+                android:contentDescription="증가"
+                app:tint="@color/gray_600"/>
 
     </LinearLayout>
 

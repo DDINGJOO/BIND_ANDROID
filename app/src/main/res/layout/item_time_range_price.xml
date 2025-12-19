@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:background="@drawable/bg_policy_section"
-    android:padding="14dp"
-    android:layout_marginBottom="8dp"
-    android:gravity="center_vertical">
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:background="@drawable/bg_policy_section"
+              android:padding="14dp"
+              android:layout_marginBottom="8dp"
+              android:gravity="center_vertical">
 
     <!-- 요일 뱃지 -->
     <TextView
-        android:id="@+id/tvDayOfWeek"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:background="@drawable/bg_circle_gray"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="13sp"
-        android:fontFamily="@font/pretendard_semibold" />
+            android:id="@+id/tvDayOfWeek"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_circle_gray"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:fontFamily="@font/pretendard_semibold"/>
 
     <!-- 시간대 -->
     <TextView
-        android:id="@+id/tvTimeRange"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_marginStart="12dp"
-        android:textColor="@color/gray_700"
-        android:textSize="14sp"
-        android:fontFamily="@font/pretendard_medium" />
+            android:id="@+id/tvTimeRange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/gray_700"
+            android:textSize="14sp"
+            android:fontFamily="@font/pretendard_medium"/>
 
     <!-- 가격 -->
     <TextView
-        android:id="@+id/tvPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        android:fontFamily="@font/pretendard_bold" />
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:fontFamily="@font/pretendard_bold"/>
 
 </LinearLayout>

@@ -1,116 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginHorizontal="16dp"
-    android:layout_marginVertical="6dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="2dp">
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:layout_marginHorizontal="16dp"
+                                   android:layout_marginVertical="6dp"
+                                   app:cardCornerRadius="12dp"
+                                   app:cardElevation="2dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
         <!-- Status Badge and Date -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tvStatus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_category_badge"
-                android:backgroundTint="@color/primary_yellow"
-                android:fontFamily="@font/pretendard_semibold"
-                android:paddingHorizontal="8dp"
-                android:paddingVertical="4dp"
-                android:text="예약 확정"
-                android:textColor="@color/black"
-                android:textSize="12sp" />
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_category_badge"
+                    android:backgroundTint="@color/primary_yellow"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="예약 확정"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"/>
 
             <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
 
             <TextView
-                android:id="@+id/tvReservationDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pretendard_regular"
-                android:text="2024.01.15"
-                android:textColor="@color/gray_500"
-                android:textSize="13sp" />
+                    android:id="@+id/tvReservationDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard_regular"
+                    android:text="2024.01.15"
+                    android:textColor="@color/gray_500"
+                    android:textSize="13sp"/>
 
         </LinearLayout>
 
         <!-- Studio Info -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:orientation="horizontal">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="0dp">
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp">
 
                 <ImageView
-                    android:id="@+id/ivStudio"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:contentDescription="스튜디오 이미지"
-                    android:scaleType="centerCrop" />
+                        android:id="@+id/ivStudio"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="스튜디오 이미지"
+                        android:scaleType="centerCrop"/>
 
             </androidx.cardview.widget.CardView>
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tvStudioName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:fontFamily="@font/pretendard_semibold"
-                    android:maxLines="1"
-                    android:text="스튜디오 이름"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                        android:id="@+id/tvStudioName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:maxLines="1"
+                        android:text="스튜디오 이름"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
 
                 <TextView
-                    android:id="@+id/tvRoomName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:ellipsize="end"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:maxLines="1"
-                    android:text="룸 이름"
-                    android:textColor="@color/gray_600"
-                    android:textSize="14sp" />
+                        android:id="@+id/tvRoomName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/pretendard_regular"
+                        android:maxLines="1"
+                        android:text="룸 이름"
+                        android:textColor="@color/gray_600"
+                        android:textSize="14sp"/>
 
                 <TextView
-                    android:id="@+id/tvDateTime"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/pretendard_medium"
-                    android:text="2024.01.20 14:00 - 16:00"
-                    android:textColor="@color/gray_500"
-                    android:textSize="13sp" />
+                        android:id="@+id/tvDateTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/pretendard_medium"
+                        android:text="2024.01.20 14:00 - 16:00"
+                        android:textColor="@color/gray_500"
+                        android:textSize="13sp"/>
 
             </LinearLayout>
 
@@ -118,29 +118,29 @@
 
         <!-- Price -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:gravity="end"
-            android:orientation="horizontal">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="end"
+                android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pretendard_regular"
-                android:text="결제 금액"
-                android:textColor="@color/gray_500"
-                android:textSize="14sp" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard_regular"
+                    android:text="결제 금액"
+                    android:textColor="@color/gray_500"
+                    android:textSize="14sp"/>
 
             <TextView
-                android:id="@+id/tvPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:fontFamily="@font/pretendard_semibold"
-                android:text="50,000원"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:text="50,000원"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
 
         </LinearLayout>
 

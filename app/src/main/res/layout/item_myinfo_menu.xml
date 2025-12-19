@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="56dp"
-    android:background="?attr/selectableItemBackground"
-    android:gravity="center_vertical"
-    android:orientation="horizontal"
-    android:paddingHorizontal="@dimen/spacing_md">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="56dp"
+              android:background="?attr/selectableItemBackground"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:paddingHorizontal="@dimen/spacing_md">
 
     <TextView
-        android:id="@+id/tv_menu_title"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="메뉴"
-        android:textColor="@color/tint_tab"
-        android:textSize="@dimen/text_lg" />
+            android:id="@+id/tv_menu_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="메뉴"
+            android:textColor="@color/tint_tab"
+            android:textSize="@dimen/text_lg"/>
 
     <ImageView
-        android:layout_width="@dimen/icon_sm"
-        android:layout_height="@dimen/icon_sm"
-        android:src="@drawable/ic_launcher_foreground"
-        android:contentDescription="Arrow"
-        app:tint="@color/gray5" />
+            android:layout_width="@dimen/icon_sm"
+            android:layout_height="@dimen/icon_sm"
+            android:src="@drawable/ic_launcher_foreground"
+            android:contentDescription="Arrow"
+            app:tint="@color/gray5"/>
 
 </LinearLayout>

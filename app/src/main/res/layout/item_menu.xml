@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="56dp"
-    android:background="?attr/selectableItemBackground"
-    android:gravity="center_vertical"
-    android:orientation="horizontal"
-    android:paddingHorizontal="20dp">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="56dp"
+              android:background="?attr/selectableItemBackground"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:paddingHorizontal="20dp">
 
     <ImageView
-        android:id="@+id/ivMenuIcon"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="12dp"
-        android:contentDescription="아이콘"
-        android:visibility="gone"
-        app:tint="@color/gray_600" />
+            android:id="@+id/ivMenuIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="아이콘"
+            android:visibility="gone"
+            app:tint="@color/gray_600"/>
 
     <TextView
-        android:id="@+id/tvMenuTitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:fontFamily="@font/pretendard_medium"
-        android:text="메뉴"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+            android:id="@+id/tvMenuTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="메뉴"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
 
     <TextView
-        android:id="@+id/tvMenuValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:fontFamily="@font/pretendard_regular"
-        android:textColor="@color/gray_500"
-        android:textSize="14sp"
-        android:visibility="gone" />
+            android:id="@+id/tvMenuValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/gray_500"
+            android:textSize="14sp"
+            android:visibility="gone"/>
 
     <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:contentDescription="이동"
-        android:src="@drawable/ic_arrow_right"
-        app:tint="@color/gray_400" />
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="이동"
+            android:src="@drawable/ic_arrow_right"
+            app:tint="@color/gray_400"/>
 
 </LinearLayout>

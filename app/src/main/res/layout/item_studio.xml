@@ -1,131 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="12dp"
-    app:cardBackgroundColor="@color/white"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="4dp">
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   xmlns:tools="http://schemas.android.com/tools"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:layout_marginBottom="12dp"
+                                   app:cardBackgroundColor="@color/white"
+                                   app:cardCornerRadius="16dp"
+                                   app:cardElevation="4dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="12dp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp">
 
         <!-- Thumbnail Image -->
         <ImageView
-            android:id="@+id/ivThumbnail"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/bg_rounded_rect"
-            android:scaleType="centerCrop"
-            tools:ignore="ContentDescription" />
+                android:id="@+id/ivThumbnail"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/bg_rounded_rect"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription"/>
 
         <!-- Content Section -->
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
             <!-- Name -->
             <TextView
-                android:id="@+id/tvName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:fontFamily="@font/pretendard_semibold"
-                android:maxLines="1"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                tools:text="스튜디오 이름" />
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:text="스튜디오 이름"/>
 
             <!-- Address -->
             <TextView
-                android:id="@+id/tvAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:ellipsize="end"
-                android:fontFamily="@font/pretendard"
-                android:maxLines="1"
-                android:textColor="@color/gray5"
-                android:textSize="12sp"
-                tools:text="서울 강남구 테헤란로" />
+                    android:id="@+id/tvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/pretendard"
+                    android:maxLines="1"
+                    android:textColor="@color/gray5"
+                    android:textSize="12sp"
+                    tools:text="서울 강남구 테헤란로"/>
 
             <!-- Rating and Review -->
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="14dp"
-                    android:layout_height="14dp"
-                    android:src="@drawable/ic_star"
-                    tools:ignore="ContentDescription" />
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_star"
+                        tools:ignore="ContentDescription"/>
 
                 <TextView
-                    android:id="@+id/tvRating"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
-                    android:fontFamily="@font/pretendard_semibold"
-                    android:textColor="@color/main_yellow"
-                    android:textSize="13sp"
-                    tools:text="4.8" />
+                        android:id="@+id/tvRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textColor="@color/main_yellow"
+                        android:textSize="13sp"
+                        tools:text="4.8"/>
 
                 <TextView
-                    android:id="@+id/tvReviewCount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
-                    android:fontFamily="@font/pretendard"
-                    android:textColor="@color/gray5"
-                    android:textSize="12sp"
-                    tools:text="(125)" />
+                        android:id="@+id/tvReviewCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:fontFamily="@font/pretendard"
+                        android:textColor="@color/gray5"
+                        android:textSize="12sp"
+                        tools:text="(125)"/>
 
             </LinearLayout>
 
             <!-- Price -->
             <TextView
-                android:id="@+id/tvPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:fontFamily="@font/pretendard_semibold"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                tools:text="15,000원~" />
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:text="15,000원~"/>
 
             <!-- Keywords -->
             <TextView
-                android:id="@+id/tvKeywords"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:ellipsize="end"
-                android:fontFamily="@font/pretendard"
-                android:maxLines="1"
-                android:textColor="@color/gray6"
-                android:textSize="11sp"
-                tools:text="#드럼 #기타 #보컬" />
+                    android:id="@+id/tvKeywords"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/pretendard"
+                    android:maxLines="1"
+                    android:textColor="@color/gray6"
+                    android:textSize="11sp"
+                    tools:text="#드럼 #기타 #보컬"/>
 
         </LinearLayout>
 
         <!-- Bookmark Icon -->
         <ImageView
-            android:id="@+id/ivBookmark"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_bookmark_empty"
-            tools:ignore="ContentDescription" />
+                android:id="@+id/ivBookmark"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_bookmark_empty"
+                tools:ignore="ContentDescription"/>
 
     </LinearLayout>
 
