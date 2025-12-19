@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="15dp"
+    android:background="@color/white">
+
+    <!-- Question Header -->
+    <LinearLayout
+        android:id="@+id/layoutQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="14dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q."
+            android:textColor="@color/main_yellow"
+            android:textSize="15sp"
+            android:fontFamily="@font/pretendard_bold" />
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:fontFamily="@font/pretendard_medium"
+            tools:text="예약 변경이나 취소가 가능한가요?" />
+
+        <ImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_arrow_down"
+            app:tint="@color/gray_500" />
+
+    </LinearLayout>
+
+    <!-- Answer Section (Initially Hidden) -->
+    <LinearLayout
+        android:id="@+id/layoutAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:paddingBottom="14dp"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A."
+            android:textColor="@color/gray_600"
+            android:textSize="14sp"
+            android:fontFamily="@font/pretendard_bold" />
+
+        <TextView
+            android:id="@+id/tvAnswer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/gray_600"
+            android:textSize="13sp"
+            android:fontFamily="@font/pretendard_medium"
+            android:lineSpacingExtra="4dp"
+            tools:text="상품별 정책에 따라 예약 상세 페이지에서 변경/취소할 수 있습니다." />
+
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_200" />
+
+</LinearLayout>
