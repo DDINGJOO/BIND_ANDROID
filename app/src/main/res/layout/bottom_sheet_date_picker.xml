@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical"
+    android:paddingBottom="34dp">
+
+    <!-- Handle Bar -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_rounded_rect" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/pretendard_bold"
+        android:text="예약 날짜 선택"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <!-- Month Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btnPrevMonth"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="8dp"
+            android:rotation="90"
+            android:src="@drawable/ic_arrow_down"
+            android:contentDescription="@string/back" />
+
+        <TextView
+            android:id="@+id/tvYearMonth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/pretendard_semibold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/btnNextMonth"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="8dp"
+            android:rotation="270"
+            android:src="@drawable/ic_arrow_down"
+            android:contentDescription="@string/back" />
+
+    </LinearLayout>
+
+    <!-- Day of Week Headers -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/pretendard_medium"
+            android:gravity="center"
+            android:text="일"
+            android:textColor="@color/error_red"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/pretendard_medium"
+            android:gravity="center"
+            android:text="월"
+            android:textColor="@color/gray6"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/pretendard_medium"
+            android:gravity="center"
+            android:text="화"
+            android:textColor="@color/gray6"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/pretendard_medium"
+            android:gravity="center"
+            android:text="수"
+            android:textColor="@color/gray6"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/pretendard_medium"
+            android:gravity="center"
+            android:text="목"
+            android:textColor="@color/gray6"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/pretendard_medium"
+            android:gravity="center"
+            android:text="금"
+            android:textColor="@color/gray6"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/pretendard_medium"
+            android:gravity="center"
+            android:text="토"
+            android:textColor="@color/custom_blue"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <!-- Calendar Grid -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:overScrollMode="never" />
+
+    <!-- Confirm Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:enabled="false"
+        android:fontFamily="@font/pretendard_semibold"
+        android:text="선택완료"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:backgroundTint="@color/main_yellow"
+        app:cornerRadius="10dp" />
+
+</LinearLayout>
