@@ -1,11 +1,6 @@
 package com.teambind.bind_android.data.api.service
 
-import com.teambind.bind_android.data.model.response.BaseResponse
-import com.teambind.bind_android.data.model.response.PlaceDetailDto
-import com.teambind.bind_android.data.model.response.RoomDetailResponse
-import com.teambind.bind_android.data.model.response.RoomDto
-import com.teambind.bind_android.data.model.response.RoomListResponse
-import com.teambind.bind_android.data.model.response.StudioListResponse
+import com.teambind.bind_android.data.model.response.*
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
