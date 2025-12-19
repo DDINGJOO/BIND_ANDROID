@@ -1,25 +1,8 @@
 package com.teambind.bind_android.data.api.service
 
-import com.teambind.bind_android.data.model.request.CancelReservationRequest
-import com.teambind.bind_android.data.model.request.CreateReservationRequest
-import com.teambind.bind_android.data.model.request.MultiSlotReservationRequest
-import com.teambind.bind_android.data.model.request.ReservationPreviewRequest
-import com.teambind.bind_android.data.model.request.UpdateProductsRequest
-import com.teambind.bind_android.data.model.request.UpdateUserInfoRequest
-import com.teambind.bind_android.data.model.response.BaseResponse
-import com.teambind.bind_android.data.model.response.MyReservationDetailResponse
-import com.teambind.bind_android.data.model.response.MyReservationsResponse
-import com.teambind.bind_android.data.model.response.ReservationFieldDto
-import com.teambind.bind_android.data.model.response.ReservationPreviewResponse
-import com.teambind.bind_android.data.model.response.ReservationTimeResultResponse
-import com.teambind.bind_android.data.model.response.TimeSlotDto
-import com.teambind.bind_android.data.model.response.UpdatedReservationResponse
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.PUT
-import retrofit2.http.Path
-import retrofit2.http.Query
+import com.teambind.bind_android.data.model.request.*
+import com.teambind.bind_android.data.model.response.*
+import retrofit2.http.*
 
 interface ReservationService {
 
