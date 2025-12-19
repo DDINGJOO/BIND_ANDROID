@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import java.text.NumberFormat
-import java.util.Locale
+import java.util.*
 import javax.inject.Inject
 
 data class PaymentHistoryItem(
@@ -63,7 +63,8 @@ class PaymentHistoryViewModel @Inject constructor(
                             reservationId = reservation.reservationId,
                             placeName = reservation.placeName ?: "",
                             roomName = reservation.roomName ?: "",
-                            paymentDate = reservation.reservationDate.split("T").firstOrNull() ?: reservation.reservationDate,
+                            paymentDate = reservation.reservationDate.split("T").firstOrNull()
+                                ?: reservation.reservationDate,
                             amount = reservation.totalPrice,
                             displayAmount = "${formatter.format(reservation.totalPrice)}원",
                             status = reservation.status,
