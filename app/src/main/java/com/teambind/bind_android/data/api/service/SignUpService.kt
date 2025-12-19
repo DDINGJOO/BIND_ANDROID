@@ -3,11 +3,7 @@ package com.teambind.bind_android.data.api.service
 import com.teambind.bind_android.data.model.request.SignUpRequest
 import com.teambind.bind_android.data.model.response.BaseResponse
 import com.teambind.bind_android.data.model.response.EmptyResult
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface SignUpService {
 
