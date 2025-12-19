@@ -115,9 +115,11 @@ class PaymentActivity : BaseActivity<ActivityPaymentBinding>() {
                     setResult(Activity.RESULT_OK)
                     finish()
                 }
+
                 is PaymentEvent.PaymentFailed -> {
                     showToast(event.message)
                 }
+
                 is PaymentEvent.NavigateBack -> {
                     setResult(SelectTimeActivity.RESULT_CANCEL_FLOW)
                     finish()
