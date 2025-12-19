@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.teambind.bind_android.R
 import com.teambind.bind_android.databinding.ItemTimeSlotBinding
 import java.text.NumberFormat
-import java.util.Locale
+import java.util.*
 
 data class TimeSlotItem(
     val time: String,           // 표시용 시간 (HH:mm)

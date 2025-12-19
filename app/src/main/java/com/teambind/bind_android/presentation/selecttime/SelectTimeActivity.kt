@@ -3,7 +3,6 @@ package com.teambind.bind_android.presentation.selecttime
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
@@ -18,7 +17,7 @@ import com.teambind.bind_android.util.extension.collectLatestFlow
 import com.teambind.bind_android.util.extension.setOnSingleClickListener
 import dagger.hilt.android.AndroidEntryPoint
 import java.text.NumberFormat
-import java.util.Locale
+import java.util.*
 
 @AndroidEntryPoint
 class SelectTimeActivity : BaseActivity<ActivitySelectTimeBinding>() {
@@ -39,6 +38,7 @@ class SelectTimeActivity : BaseActivity<ActivitySelectTimeBinding>() {
                 setResult(Activity.RESULT_OK)
                 finish()
             }
+
             RESULT_CANCEL_FLOW -> {
                 // 예약 취소 시 Room Detail까지 돌아감
                 setResult(RESULT_CANCEL_FLOW)
@@ -150,9 +150,11 @@ class SelectTimeActivity : BaseActivity<ActivitySelectTimeBinding>() {
                         roomPrice = event.roomPrice
                     )
                 }
+
                 is SelectTimeEvent.Dismiss -> {
                     finish()
                 }
+
                 is SelectTimeEvent.ShowUnavailableAlert -> {
                     showToast("선택 범위 내에 예약 불가능한 시간이 포함되어 있습니다.")
                 }
