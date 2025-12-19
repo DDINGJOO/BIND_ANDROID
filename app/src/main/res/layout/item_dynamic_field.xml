@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:paddingHorizontal="15dp">
+
+    <TextView
+        android:id="@+id/tvFieldLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray_600"
+        android:textSize="13sp"
+        android:fontFamily="@font/pretendard_medium" />
+
+    <EditText
+        android:id="@+id/etFieldValue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_auth_text_field"
+        android:paddingHorizontal="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray_400"
+        android:textSize="14sp"
+        android:fontFamily="@font/pretendard_medium"
+        android:inputType="text"
+        android:maxLines="1" />
+
+</LinearLayout>
