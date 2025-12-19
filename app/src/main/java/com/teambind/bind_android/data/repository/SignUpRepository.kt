@@ -3,8 +3,8 @@ package com.teambind.bind_android.data.repository
 import com.teambind.bind_android.data.api.service.SignUpService
 import com.teambind.bind_android.data.model.request.SignUpRequest
 import retrofit2.HttpException
-import java.net.UnknownHostException
 import java.net.SocketTimeoutException
+import java.net.UnknownHostException
 import javax.inject.Inject
 import javax.inject.Singleton
 
