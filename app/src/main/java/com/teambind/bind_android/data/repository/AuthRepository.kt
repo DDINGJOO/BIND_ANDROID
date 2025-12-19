@@ -6,8 +6,8 @@ import com.teambind.bind_android.data.model.request.LoginRequest
 import com.teambind.bind_android.data.model.request.RefreshTokenRequest
 import com.teambind.bind_android.data.model.response.LoginResponse
 import retrofit2.HttpException
-import java.net.UnknownHostException
 import java.net.SocketTimeoutException
+import java.net.UnknownHostException
 import javax.inject.Inject
 import javax.inject.Singleton
 
