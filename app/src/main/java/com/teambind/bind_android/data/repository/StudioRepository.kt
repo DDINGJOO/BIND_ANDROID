@@ -1,11 +1,7 @@
 package com.teambind.bind_android.data.repository
 
 import com.teambind.bind_android.data.api.service.StudioService
-import com.teambind.bind_android.data.model.response.PlaceDetailDto
-import com.teambind.bind_android.data.model.response.RoomDetailResponse
-import com.teambind.bind_android.data.model.response.RoomDto
-import com.teambind.bind_android.data.model.response.RoomListResponse
-import com.teambind.bind_android.data.model.response.StudioListResponse
+import com.teambind.bind_android.data.model.response.*
 import javax.inject.Inject
 import javax.inject.Singleton
 
