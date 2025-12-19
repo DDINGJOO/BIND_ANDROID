@@ -10,7 +10,7 @@ import com.teambind.bind_android.R
 import com.teambind.bind_android.data.model.response.StudioDto
 import com.teambind.bind_android.databinding.ItemStudioBinding
 import java.text.NumberFormat
-import java.util.Locale
+import java.util.*
 
 class StudioAdapter(
     private val onItemClick: (StudioDto) -> Unit
