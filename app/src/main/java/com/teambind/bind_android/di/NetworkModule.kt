@@ -2,20 +2,7 @@ package com.teambind.bind_android.di
 
 import com.teambind.bind_android.data.api.interceptor.AuthInterceptor
 import com.teambind.bind_android.data.api.interceptor.TokenRefreshAuthenticator
-import com.teambind.bind_android.data.api.service.AuthService
-import com.teambind.bind_android.data.api.service.CommunityService
-import com.teambind.bind_android.data.api.service.EnumsService
-import com.teambind.bind_android.data.api.service.FeedService
-import com.teambind.bind_android.data.api.service.HomeService
-import com.teambind.bind_android.data.api.service.ReportService
-import com.teambind.bind_android.data.api.service.ImageService
-import com.teambind.bind_android.data.api.service.PaymentService
-import com.teambind.bind_android.data.api.service.PricingPolicyService
-import com.teambind.bind_android.data.api.service.ProductService
-import com.teambind.bind_android.data.api.service.ProfileService
-import com.teambind.bind_android.data.api.service.ReservationService
-import com.teambind.bind_android.data.api.service.SignUpService
-import com.teambind.bind_android.data.api.service.StudioService
+import com.teambind.bind_android.data.api.service.*
 import com.teambind.bind_android.util.Constants
 import dagger.Module
 import dagger.Provides
