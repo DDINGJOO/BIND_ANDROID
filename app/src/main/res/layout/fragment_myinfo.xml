@@ -1,152 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="@color/background">
 
     <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="@color/white"
-        app:layout_constraintTop_toTopOf="parent">
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/pretendard_semibold"
-            android:text="내 정보"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/pretendard_semibold"
+                android:text="내 정보"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
 
         <ImageView
-            android:id="@+id/btnSettings"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_gravity="end"
-            android:layout_marginEnd="15dp"
-            android:contentDescription="settings"
-            android:src="@drawable/ic_settings"
-            app:tint="@color/black" />
+                android:id="@+id/btnSettings"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                android:contentDescription="settings"
+                android:src="@drawable/ic_settings"
+                app:tint="@color/black"/>
 
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:fillViewport="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="15dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="15dp">
 
             <!-- Profile Section -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="15dp"
-                android:paddingEnd="15dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp">
 
                 <!-- Profile Image Container (왼쪽) -->
                 <FrameLayout
-                    android:id="@+id/layoutProfileImage"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:clipChildren="false"
-                    android:clipToPadding="false"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                        android:id="@+id/layoutProfileImage"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/ivProfile"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@color/gray2"
-                        android:scaleType="centerCrop"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
-                        tools:src="@drawable/ic_launcher_foreground" />
+                            android:id="@+id/ivProfile"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@color/gray2"
+                            android:scaleType="centerCrop"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                            tools:src="@drawable/ic_launcher_foreground"/>
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_gravity="bottom|end"
-                        android:layout_marginEnd="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:contentDescription="edit profile"
-                        android:src="@drawable/ic_edit_circle" />
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="bottom|end"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:contentDescription="edit profile"
+                            android:src="@drawable/ic_edit_circle"/>
 
                 </FrameLayout>
 
                 <!-- Nickname -->
                 <TextView
-                    android:id="@+id/tvNickname"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:fontFamily="@font/pretendard_bold"
-                    android:text="고라니님"
-                    android:textColor="@color/black"
-                    android:textSize="22sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/layoutProfileImage"
-                    app:layout_constraintTop_toTopOf="@id/layoutProfileImage"
-                    app:layout_constraintBottom_toTopOf="@id/tvEmail"
-                    app:layout_constraintVertical_chainStyle="packed" />
+                        android:id="@+id/tvNickname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/pretendard_bold"
+                        android:text="고라니님"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/layoutProfileImage"
+                        app:layout_constraintTop_toTopOf="@id/layoutProfileImage"
+                        app:layout_constraintBottom_toTopOf="@id/tvEmail"
+                        app:layout_constraintVertical_chainStyle="packed"/>
 
                 <!-- Email / Introduction -->
                 <TextView
-                    android:id="@+id/tvEmail"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/pretendard_medium"
-                    android:text="bander@gmail.com"
-                    android:textColor="@color/gray5"
-                    android:textSize="14sp"
-                    android:maxLines="2"
-                    android:ellipsize="end"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/layoutProfileImage"
-                    app:layout_constraintTop_toBottomOf="@id/tvNickname"
-                    app:layout_constraintBottom_toBottomOf="@id/layoutProfileImage" />
+                        android:id="@+id/tvEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/pretendard_medium"
+                        android:text="bander@gmail.com"
+                        android:textColor="@color/gray5"
+                        android:textSize="14sp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/layoutProfileImage"
+                        app:layout_constraintTop_toBottomOf="@id/tvNickname"
+                        app:layout_constraintBottom_toBottomOf="@id/layoutProfileImage"/>
 
                 <!-- Watch My Mini Feed Button -->
                 <LinearLayout
-                    android:id="@+id/btnMiniFeed"
-                    android:layout_width="wrap_content"
-                    android:layout_height="34dp"
-                    android:layout_marginTop="17dp"
-                    android:background="@drawable/bg_button_yellow_border"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="9dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/layoutProfileImage">
+                        android:id="@+id/btnMiniFeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:layout_marginTop="17dp"
+                        android:background="@drawable/bg_button_yellow_border"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="9dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/layoutProfileImage">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:text="내 미니피드 보기"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:text="내 미니피드 보기"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"/>
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginStart="5dp"
-                        android:contentDescription="arrow"
-                        android:src="@drawable/ic_arrow_right_circle_yellow" />
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="5dp"
+                            android:contentDescription="arrow"
+                            android:src="@drawable/ic_arrow_right_circle_yellow"/>
 
                 </LinearLayout>
 
@@ -154,63 +154,63 @@
 
             <!-- Quick Action Buttons -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:orientation="horizontal"
-                android:paddingStart="33dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="33dp">
 
                 <!-- My Reservation -->
                 <LinearLayout
-                    android:id="@+id/btnMyReservation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
+                        android:id="@+id/btnMyReservation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
 
                     <FrameLayout
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/bg_circle_white">
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/bg_circle_white">
 
                         <ImageView
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="reservation"
-                            android:src="@drawable/ic_reservation" />
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="reservation"
+                                android:src="@drawable/ic_reservation"/>
 
                     </FrameLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/pretendard_medium"
-                            android:text="내 예약"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:text="내 예약"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"/>
 
                         <!-- Count Badge -->
                         <TextView
-                            android:id="@+id/tvReservationCount"
-                            android:layout_width="wrap_content"
-                            android:layout_height="16dp"
-                            android:layout_marginStart="3dp"
-                            android:background="@drawable/bg_badge_black"
-                            android:fontFamily="@font/pretendard_medium"
-                            android:gravity="center"
-                            android:paddingStart="6dp"
-                            android:paddingEnd="6dp"
-                            android:text="3"
-                            android:textColor="@color/white"
-                            android:textSize="10sp" />
+                                android:id="@+id/tvReservationCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="3dp"
+                                android:background="@drawable/bg_badge_black"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:gravity="center"
+                                android:paddingStart="6dp"
+                                android:paddingEnd="6dp"
+                                android:text="3"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"/>
 
                     </LinearLayout>
 
@@ -218,35 +218,35 @@
 
                 <!-- My Posts -->
                 <LinearLayout
-                    android:id="@+id/btnMyPost"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="36dp"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
+                        android:id="@+id/btnMyPost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
 
                     <FrameLayout
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/bg_circle_white">
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/bg_circle_white">
 
                         <ImageView
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="my posts"
-                            android:src="@drawable/ic_my_post" />
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="my posts"
+                                android:src="@drawable/ic_my_post"/>
 
                     </FrameLayout>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/pretendard_medium"
-                        android:text="내 게시글"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/pretendard_medium"
+                            android:text="내 게시글"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"/>
 
                 </LinearLayout>
 
@@ -254,63 +254,63 @@
 
             <!-- Menu Container -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@color/white"
-                android:orientation="vertical"
-                android:paddingTop="20dp"
-                android:paddingBottom="80dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="80dp">
 
                 <!-- Menu Items -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp">
 
                     <!-- Notice/Event -->
                     <include
-                        android:id="@+id/menuNotice"
-                        layout="@layout/item_myinfo_menu_new" />
+                            android:id="@+id/menuNotice"
+                            layout="@layout/item_myinfo_menu_new"/>
 
                     <!-- Customer Service -->
                     <include
-                        android:id="@+id/menuCustomerService"
-                        layout="@layout/item_myinfo_menu_new"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp" />
+                            android:id="@+id/menuCustomerService"
+                            layout="@layout/item_myinfo_menu_new"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"/>
 
                     <!-- Terms -->
                     <include
-                        android:id="@+id/menuTerms"
-                        layout="@layout/item_myinfo_menu_new"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp" />
+                            android:id="@+id/menuTerms"
+                            layout="@layout/item_myinfo_menu_new"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"/>
 
                     <!-- Version Info -->
                     <include
-                        android:id="@+id/menuVersion"
-                        layout="@layout/item_myinfo_menu_new"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp" />
+                            android:id="@+id/menuVersion"
+                            layout="@layout/item_myinfo_menu_new"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"/>
 
                 </LinearLayout>
 
                 <!-- Copyright -->
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="40dp"
-                    android:fontFamily="@font/pretendard"
-                    android:text="© 2025 Team Bind Inc. All rights reserved."
-                    android:textColor="@color/gray5"
-                    android:textSize="11sp" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/pretendard"
+                        android:text="© 2025 Team Bind Inc. All rights reserved."
+                        android:textColor="@color/gray5"
+                        android:textSize="11sp"/>
 
             </LinearLayout>
 
