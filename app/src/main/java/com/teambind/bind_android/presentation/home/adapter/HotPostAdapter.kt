@@ -37,7 +37,8 @@ class HotPostAdapter(
             with(binding) {
                 // 마지막 아이템이면 오른쪽 마진 제거
                 val layoutParams = root.layoutParams as ViewGroup.MarginLayoutParams
-                layoutParams.marginEnd = if (isLastItem) 0 else (10 * root.context.resources.displayMetrics.density).toInt()
+                layoutParams.marginEnd =
+                    if (isLastItem) 0 else (10 * root.context.resources.displayMetrics.density).toInt()
                 root.layoutParams = layoutParams
 
                 // 카테고리 배지
