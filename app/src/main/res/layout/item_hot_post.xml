@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="220dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="10dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:strokeColor="@color/gray2"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <!-- Category Label (Pastel Badge) -->
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_board_badge_orange"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/gray6"
+            android:textSize="10sp"
+            tools:text="질문" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/pretendard_semibold"
+            android:maxLines="2"
+            android:minLines="2"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="밴드 모집합니다! 기타리스트 구해요" />
+
+        <!-- Bottom Info Row -->
+        <LinearLayout
+            android:id="@+id/layoutBottomInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Profile Image -->
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                tools:ignore="ContentDescription" />
+
+            <!-- Nickname -->
+            <TextView
+                android:id="@+id/tvAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:textColor="@color/gray6"
+                android:textSize="11sp"
+                tools:text="밴드맨" />
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- Like Icon -->
+            <ImageView
+                android:id="@+id/ivLike"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_like_small"
+                tools:ignore="ContentDescription" />
+
+            <!-- Like Count -->
+            <TextView
+                android:id="@+id/tvLikeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:textColor="@color/gray6"
+                android:textSize="11sp"
+                tools:text="12" />
+
+            <!-- Dot -->
+            <TextView
+                android:id="@+id/ivDot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:text="·"
+                android:textColor="@color/gray5"
+                android:textSize="11sp" />
+
+            <!-- Comment Icon -->
+            <ImageView
+                android:id="@+id/ivComment"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_comment_small"
+                tools:ignore="ContentDescription" />
+
+            <!-- Comment Count -->
+            <TextView
+                android:id="@+id/tvCommentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:textColor="@color/gray6"
+                android:textSize="11sp"
+                tools:text="5" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
