@@ -6,10 +6,10 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.teambind.bind_android.databinding.FragmentHomeBinding
 import com.teambind.bind_android.presentation.base.BaseFragment
+import com.teambind.bind_android.presentation.communitydetail.CommunityDetailActivity
 import com.teambind.bind_android.presentation.home.adapter.BannerAdapter
 import com.teambind.bind_android.presentation.home.adapter.HomeStudioAdapter
 import com.teambind.bind_android.presentation.home.adapter.HotPostAdapter
-import com.teambind.bind_android.presentation.communitydetail.CommunityDetailActivity
 import com.teambind.bind_android.presentation.reservationhistory.ReservationHistoryActivity
 import com.teambind.bind_android.presentation.search.SearchActivity
 import com.teambind.bind_android.presentation.studiodetail.StudioDetailActivity
