@@ -13,6 +13,13 @@ import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MapStyleOptions
+import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.chip.Chip
 import com.google.android.material.tabs.TabLayout
 import com.google.gson.Gson
@@ -39,7 +46,7 @@ import java.time.format.TextStyle
 import java.util.*
 
 @AndroidEntryPoint
-class StudioDetailActivity : BaseActivity<ActivityStudioDetailBinding>() {
+class StudioDetailActivity : BaseActivity<ActivityStudioDetailBinding>(), OnMapReadyCallback {
 
     private val viewModel: StudioDetailViewModel by viewModels()
 
@@ -54,6 +61,10 @@ class StudioDetailActivity : BaseActivity<ActivityStudioDetailBinding>() {
     private var isRoomDetail = false
     private var currentRoomId: Long = 0L
     private var currentPlaceId: String = ""
+
+    // 지도 관련
+    private var googleMap: GoogleMap? = null
+    private var studioLocation: LatLng? = null
 
     // 달력 관련
     private var currentYearMonth = YearMonth.now()
@@ -131,6 +142,53 @@ class StudioDetailActivity : BaseActivity<ActivityStudioDetailBinding>() {
         setupClickListeners()
         setupRoomList()
         setupCalendar()
+        setupGoogleMap()
+    }
+
+    private fun setupGoogleMap() {
+        val mapFragment = supportFragmentManager.findFragmentById(R.id.mapContainer) as? SupportMapFragment
+        mapFragment?.getMapAsync(this)
+    }
+
+    override fun onMapReady(map: GoogleMap) {
+        googleMap = map
+
+        // 지도 UI 설정
+        map.uiSettings.apply {
+            isZoomControlsEnabled = false     // 버튼 숨기기
+            isMyLocationButtonEnabled = false
+            isCompassEnabled = false
+            isMapToolbarEnabled = false
+            isScrollGesturesEnabled = true    // 스크롤 제스처
+            isZoomGesturesEnabled = true      // 핀치 줌 제스처
+            isTiltGesturesEnabled = false
+            isRotateGesturesEnabled = false
+        }
+
+        // 커스텀 맵 스타일 적용 (POI 숨기기)
+        try {
+            map.setMapStyle(
+                MapStyleOptions.loadRawResourceStyle(this, R.raw.map_style)
+            )
+        } catch (e: Exception) {
+            // 스타일 적용 실패 시 기본 스타일 사용
+        }
+
+        // 이미 위치 정보가 있으면 마커 표시
+        studioLocation?.let { location ->
+            updateMapLocation(location)
+        }
+    }
+
+    private fun updateMapLocation(location: LatLng) {
+        googleMap?.let { map ->
+            map.clear()
+            map.addMarker(
+                MarkerOptions()
+                    .position(location)
+            )
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 16f))
+        }
     }
 
     private fun setupRoomList() {
@@ -491,6 +549,15 @@ class StudioDetailActivity : BaseActivity<ActivityStudioDetailBinding>() {
             roomCount = place.roomCount ?: place.roomIds?.size ?: 0
             updateRoomEmptyState(roomLoadFailed, roomCount)
 
+            // 지도에 위치 표시
+            val latitude = place.location?.latitude
+            val longitude = place.location?.longitude
+            if (latitude != null && longitude != null) {
+                val location = LatLng(latitude, longitude)
+                studioLocation = location
+                updateMapLocation(location)
+            }
+
             // Place Detail: Room 전용 섹션 숨기기
             rowOperatingHours.visibility = View.GONE
             rowPrice.visibility = View.GONE
@@ -555,6 +622,15 @@ class StudioDetailActivity : BaseActivity<ActivityStudioDetailBinding>() {
 
             roomCount = place.roomCount ?: place.roomIds?.size ?: 0
             updateRoomEmptyState(false, roomCount)
+
+            // 지도에 위치 표시
+            val latitude = place.location?.latitude
+            val longitude = place.location?.longitude
+            if (latitude != null && longitude != null) {
+                val location = LatLng(latitude, longitude)
+                studioLocation = location
+                updateMapLocation(location)
+            }
         }
     }
 
