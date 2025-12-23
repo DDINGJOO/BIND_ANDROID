@@ -9,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.teambind.bind_android"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.teambind.bind_android"
@@ -74,6 +74,12 @@ dependencies {
     implementation(libs.glide)
     ksp(libs.glide.compiler)
 
+    // CircleImageView
+    implementation(libs.circleimageview)
+
+    // Flexbox
+    implementation(libs.flexbox)
+
     // ViewBinding delegate
     implementation(libs.viewbinding.delegate)
 
@@ -89,6 +95,11 @@ dependencies {
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+
+    // Google Maps
+    implementation(libs.play.services.maps)
+    implementation(libs.play.services.location)
+    implementation(libs.maps.utils)
 
     // Testing
     testImplementation(libs.junit)
