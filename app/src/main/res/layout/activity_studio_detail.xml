@@ -541,24 +541,22 @@
 
                 </LinearLayout>
 
-                <!-- Map Placeholder -->
-                <FrameLayout
+                <!-- Map Container -->
+                <androidx.cardview.widget.CardView
                         android:id="@+id/layoutMap"
                         android:layout_width="match_parent"
-                        android:layout_height="240dp"
+                        android:layout_height="180dp"
                         android:layout_marginTop="20dp"
-                        android:background="@color/gray1">
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp">
 
-                    <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/pretendard"
-                            android:text="지도 영역"
-                            android:textColor="@color/gray5"
-                            android:textSize="14sp"/>
+                    <androidx.fragment.app.FragmentContainerView
+                            android:id="@+id/mapContainer"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
 
-                </FrameLayout>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
