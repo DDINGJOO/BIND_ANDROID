@@ -11,15 +11,21 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+enum class FindViewMode {
+    MAP, LIST
+}
+
 data class FindUiState(
     val isLoading: Boolean = false,
-    val currentAddress: String = "인천광역시 구월동",
+    val currentAddress: String = "서울 강남역",
     val studios: List<StudioDto> = emptyList(),
     val selectedStudio: StudioDto? = null,
     val errorMessage: String? = null,
-    // 현재 지도 중심 좌표
-    val centerLatitude: Double = 37.4480,
-    val centerLongitude: Double = 126.7025
+    // 현재 지도 중심 좌표 (강남역)
+    val centerLatitude: Double = 37.4979,
+    val centerLongitude: Double = 127.0276,
+    // 뷰 모드 (지도/목록)
+    val viewMode: FindViewMode = FindViewMode.MAP
 )
 
 @HiltViewModel
@@ -30,9 +36,7 @@ class FindViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(FindUiState())
     val uiState: StateFlow<FindUiState> = _uiState.asStateFlow()
 
-    init {
-        loadNearbyStudios()
-    }
+    // 초기 로드는 Fragment에서 위치를 받은 후 onMapCameraIdle()로 호출됨
 
     fun loadNearbyStudios() {
         viewModelScope.launch {
@@ -65,6 +69,11 @@ class FindViewModel @Inject constructor(
         loadNearbyStudios()
     }
 
+    fun onMapCameraIdle(latitude: Double, longitude: Double) {
+        // 카메라 이동이 완료되면 해당 위치 기준으로 스튜디오 검색
+        updateMapCenter(latitude, longitude)
+    }
+
     fun selectStudio(studio: StudioDto) {
         _uiState.value = _uiState.value.copy(selectedStudio = studio)
     }
@@ -79,6 +88,15 @@ class FindViewModel @Inject constructor(
 
     fun clearError() {
         _uiState.value = _uiState.value.copy(errorMessage = null)
+    }
+
+    fun toggleViewMode() {
+        val newMode = if (_uiState.value.viewMode == FindViewMode.MAP) {
+            FindViewMode.LIST
+        } else {
+            FindViewMode.MAP
+        }
+        _uiState.value = _uiState.value.copy(viewMode = newMode)
     }
 
     fun searchStudios(keyword: String) {
