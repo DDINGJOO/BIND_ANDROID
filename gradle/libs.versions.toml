@@ -43,6 +43,17 @@ splashscreen = "1.0.1"
 # Hilt (의존성 주입)
 hilt = "2.52"
 
+# CircleImageView
+circleimageview = "3.1.0"
+
+# Flexbox
+flexbox = "3.0.0"
+
+# Google Maps
+playServicesMaps = "19.0.0"
+playServicesLocation = "21.3.0"
+mapsUtils = "3.8.2"
+
 # KSP
 ksp = "2.0.21-1.0.28"
 
@@ -96,6 +107,17 @@ androidx-splashscreen = { group = "androidx.core", name = "core-splashscreen", v
 # Hilt
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+
+# CircleImageView
+circleimageview = { group = "de.hdodenhof", name = "circleimageview", version.ref = "circleimageview" }
+
+# Flexbox
+flexbox = { group = "com.google.android.flexbox", name = "flexbox", version.ref = "flexbox" }
+
+# Google Maps
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+maps-utils = { group = "com.google.maps.android", name = "android-maps-utils", version.ref = "mapsUtils" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
