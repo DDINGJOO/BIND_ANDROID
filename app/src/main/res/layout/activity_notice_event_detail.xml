@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="@color/white">
+
+    <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="공지사항"
+            app:titleCentered="true"
+            app:titleTextColor="@color/black"/>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_md">
+
+            <!-- Badge -->
+            <TextView
+                    android:id="@+id/tvBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_badge_notice"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="공지"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"/>
+
+            <!-- Title -->
+            <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="제목"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+            <!-- Date -->
+            <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="2024.01.01"
+                    android:textColor="@color/gray6"
+                    android:textSize="13sp"/>
+
+            <!-- Divider -->
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/line"/>
+
+            <!-- Content -->
+            <TextView
+                    android:id="@+id/tvContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="내용"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+            android:id="@+id/loadingOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_alpha_50"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone">
+
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

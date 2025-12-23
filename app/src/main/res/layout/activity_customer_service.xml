@@ -179,6 +179,20 @@
 
         </LinearLayout>
 
+        <Button
+                android:id="@+id/btnWriteInquiry"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="15dp"
+                android:text="1:1 문의하기"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/pretendard_semibold"
+                app:backgroundTint="@color/white"
+                app:strokeColor="@color/gray_300"
+                app:strokeWidth="1dp"
+                app:cornerRadius="8dp"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

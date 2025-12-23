@@ -49,6 +49,17 @@
                 android:exported="false"
                 android:windowSoftInputMode="adjustResize"/>
 
+        <!-- Authentication Activity (본인인증 안내) -->
+        <activity
+                android:name=".presentation.start.auth.AuthenticationActivity"
+                android:exported="false"/>
+
+        <!-- ID Verify Activity (SMS 인증) -->
+        <activity
+                android:name=".presentation.start.auth.IDVerifyActivity"
+                android:exported="false"
+                android:windowSoftInputMode="adjustResize"/>
+
         <!-- Email Auth Activity -->
         <activity
                 android:name=".presentation.start.emailauth.EmailAuthActivity"
@@ -181,6 +192,59 @@
         <!-- Customer Service Activity -->
         <activity
                 android:name=".presentation.customerservice.CustomerServiceActivity"
+                android:exported="false"/>
+
+        <!-- Write Inquiry Activity -->
+        <activity
+                android:name=".presentation.customerservice.WriteInquiryActivity"
+                android:exported="false"
+                android:windowSoftInputMode="adjustResize"/>
+
+        <!-- Notice Event Detail Activity -->
+        <activity
+                android:name=".presentation.noticeevent.NoticeEventDetailActivity"
+                android:exported="false"/>
+
+        <!-- Reset Password Activity -->
+        <activity
+                android:name=".presentation.start.findpassword.ResetPasswordActivity"
+                android:exported="false"
+                android:windowSoftInputMode="adjustResize"/>
+
+        <!-- Notify Setting Activity -->
+        <activity
+                android:name=".presentation.settings.NotifySettingActivity"
+                android:exported="false"/>
+
+        <!-- Version Info Activity -->
+        <activity
+                android:name=".presentation.settings.VersionInfoActivity"
+                android:exported="false"/>
+
+        <!-- Account Setting Activity -->
+        <activity
+                android:name=".presentation.settings.AccountSettingActivity"
+                android:exported="false"/>
+
+        <!-- Change Password Activity -->
+        <activity
+                android:name=".presentation.settings.ChangePasswordActivity"
+                android:exported="false"
+                android:windowSoftInputMode="adjustResize"/>
+
+        <!-- Reservation Cancel Activity -->
+        <activity
+                android:name=".presentation.reservationcancel.ReservationCancelActivity"
+                android:exported="false"/>
+
+        <!-- Liked Posts Activity -->
+        <activity
+                android:name=".presentation.likedposts.LikedPostsActivity"
+                android:exported="false"/>
+
+        <!-- Inquiry Detail Activity -->
+        <activity
+                android:name=".presentation.inquirydetail.InquiryDetailActivity"
                 android:exported="false"/>
 
     </application>

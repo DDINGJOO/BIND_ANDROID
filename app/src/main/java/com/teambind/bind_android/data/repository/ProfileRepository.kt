@@ -98,4 +98,37 @@ class ProfileRepository @Inject constructor(
             Result.failure(e)
         }
     }
+
+    // 회원 탈퇴
+    suspend fun withdraw(): Result<Boolean> {
+        return try {
+            val response = profileService.withdraw()
+            if (response.isSuccess) {
+                Result.success(true)
+            } else {
+                Result.failure(Exception("회원 탈퇴에 실패했습니다."))
+            }
+        } catch (e: Exception) {
+            Result.failure(Exception("회원 탈퇴에 실패했습니다."))
+        }
+    }
+
+    // 비밀번호 변경 (로그인 상태에서)
+    suspend fun changePassword(newPassword: String, newPasswordConfirm: String): Result<Boolean> {
+        return try {
+            val response = profileService.changePassword(
+                mapOf(
+                    "newPassword" to newPassword,
+                    "newPasswordConfirm" to newPasswordConfirm
+                )
+            )
+            if (response.isSuccess) {
+                Result.success(true)
+            } else {
+                Result.failure(Exception("비밀번호 변경에 실패했습니다."))
+            }
+        } catch (e: Exception) {
+            Result.failure(Exception("비밀번호 변경에 실패했습니다."))
+        }
+    }
 }

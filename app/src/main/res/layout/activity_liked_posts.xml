@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background"
+              android:orientation="vertical">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/white"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="좋아요"
+            app:titleTextAppearance="@style/TextStyle.Title"
+            app:titleTextColor="@color/black"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_200"/>
+
+    <!-- Empty State -->
+    <LinearLayout
+            android:id="@+id/layoutEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_heart"
+                android:alpha="0.3"
+                app:tint="@color/gray5"
+                android:contentDescription="빈 상태"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:text="좋아요한 게시물이 없습니다."
+                android:textColor="@color/gray5"
+                android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <!-- Post List -->
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPosts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingVertical="8dp"/>
+
+    <!-- Loading -->
+    <FrameLayout
+            android:id="@+id/layoutLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:visibility="gone">
+
+        <ProgressBar
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+</LinearLayout>

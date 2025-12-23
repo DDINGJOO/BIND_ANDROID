@@ -55,6 +55,10 @@ class CustomerServiceActivity : BaseActivity<ActivityCustomerServiceBinding>() {
             }
             startActivity(intent)
         }
+
+        binding.btnWriteInquiry.setOnSingleClickListener {
+            startActivity(WriteInquiryActivity.createIntent(this))
+        }
     }
 
     private fun setupCategoryTabs(categories: List<String>, selectedCategory: String) {

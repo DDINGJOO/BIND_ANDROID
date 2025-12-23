@@ -13,6 +13,7 @@ import com.teambind.bind_android.databinding.ActivitySelectTimeBinding
 import com.teambind.bind_android.presentation.base.BaseActivity
 import com.teambind.bind_android.presentation.reservationoption.ReservationOptionActivity
 import com.teambind.bind_android.presentation.selecttime.adapter.TimeSlotAdapter
+import com.teambind.bind_android.presentation.start.auth.AuthenticationActivity
 import com.teambind.bind_android.util.extension.collectLatestFlow
 import com.teambind.bind_android.util.extension.setOnSingleClickListener
 import dagger.hilt.android.AndroidEntryPoint
@@ -27,6 +28,16 @@ class SelectTimeActivity : BaseActivity<ActivitySelectTimeBinding>() {
     private val timeSlotAdapter by lazy {
         TimeSlotAdapter { index, _ ->
             viewModel.onTimeSlotClick(index)
+        }
+    }
+
+    // 본인인증 화면 결과 처리
+    private val authenticationLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            // 본인인증 완료 - 예약 재시도
+            viewModel.retryReservationAfterVerification()
         }
     }
 
@@ -157,6 +168,11 @@ class SelectTimeActivity : BaseActivity<ActivitySelectTimeBinding>() {
 
                 is SelectTimeEvent.ShowUnavailableAlert -> {
                     showToast("선택 범위 내에 예약 불가능한 시간이 포함되어 있습니다.")
+                }
+
+                is SelectTimeEvent.RequirePhoneVerification -> {
+                    // 본인인증 필요 - 인증 화면으로 이동
+                    authenticationLauncher.launch(AuthenticationActivity.createIntent(this))
                 }
             }
         }

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="@color/white">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="본인인증"
+            app:titleCentered="true"
+            app:titleTextColor="@color/black"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintBottom_toTopOf="@id/btnVerify">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/spacing_md"
+                android:paddingTop="@dimen/spacing_xl">
+
+            <!-- Phone Number Section -->
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="휴대폰 번호"
+                    android:textColor="@color/tint_tab"
+                    android:textSize="@dimen/text_md"
+                    android:textStyle="bold"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPhone"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:boxCornerRadiusBottomEnd="@dimen/input_radius"
+                        app:boxCornerRadiusBottomStart="@dimen/input_radius"
+                        app:boxCornerRadiusTopEnd="@dimen/input_radius"
+                        app:boxCornerRadiusTopStart="@dimen/input_radius">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_height"
+                            android:hint="01012345678"
+                            android:inputType="phone"
+                            android:maxLength="11"
+                            android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRequestCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/input_height"
+                        android:layout_marginStart="8dp"
+                        android:text="인증요청"
+                        android:textSize="14sp"
+                        android:enabled="false"
+                        app:backgroundTint="@color/primary_blue"
+                        app:cornerRadius="@dimen/button_radius"/>
+
+            </LinearLayout>
+
+            <!-- Verification Code Section -->
+            <TextView
+                    android:id="@+id/tvCodeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_lg"
+                    android:text="인증번호"
+                    android:textColor="@color/tint_tab"
+                    android:textSize="@dimen/text_md"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+
+            <LinearLayout
+                    android:id="@+id/layoutCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilCode"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:boxCornerRadiusBottomEnd="@dimen/input_radius"
+                        app:boxCornerRadiusBottomStart="@dimen/input_radius"
+                        app:boxCornerRadiusTopEnd="@dimen/input_radius"
+                        app:boxCornerRadiusTopStart="@dimen/input_radius"
+                        app:suffixText=""
+                        app:suffixTextColor="@color/error_red">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_height"
+                            android:hint="인증번호 6자리"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnResendCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/input_height"
+                        android:layout_marginStart="8dp"
+                        android:text="재전송"
+                        android:textSize="14sp"
+                        app:backgroundTint="@color/gray4"
+                        app:cornerRadius="@dimen/button_radius"/>
+
+            </LinearLayout>
+
+            <!-- Timer Text -->
+            <TextView
+                    android:id="@+id/tvTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="남은 시간: 05:00"
+                    android:textColor="@color/error_red"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+
+            <!-- Info Text -->
+            <TextView
+                    android:id="@+id/tvInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="인증번호가 발송되었습니다.\n5분 내에 인증번호를 입력해주세요."
+                    android:textColor="@color/gray6"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp"
+                    android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Verify Button -->
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVerify"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginHorizontal="@dimen/spacing_md"
+            android:layout_marginBottom="@dimen/spacing_lg"
+            android:text="인증하기"
+            android:textSize="@dimen/text_lg"
+            android:fontFamily="@font/pretendard_semibold"
+            android:enabled="false"
+            app:backgroundTint="@color/primary_blue"
+            app:cornerRadius="@dimen/button_radius"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- Loading Overlay -->
+    <FrameLayout
+            android:id="@+id/loadingOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_alpha_50"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

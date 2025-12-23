@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="@color/white">
+
+    <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="문의하기"
+            app:titleCentered="true"
+            app:titleTextColor="@color/black"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@id/btnSubmit"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/spacing_md">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="문의 유형"
+                    android:textColor="@color/tint_tab"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+            <Spinner
+                    android:id="@+id/spinnerCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_spinner"
+                    android:paddingHorizontal="12dp"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="제목"
+                    android:textColor="@color/tint_tab"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTitle"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:boxCornerRadiusBottomEnd="@dimen/input_radius"
+                    app:boxCornerRadiusBottomStart="@dimen/input_radius"
+                    app:boxCornerRadiusTopEnd="@dimen/input_radius"
+                    app:boxCornerRadiusTopStart="@dimen/input_radius">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/input_height"
+                        android:hint="제목을 입력해주세요"
+                        android:inputType="text"
+                        android:maxLines="1"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="내용"
+                    android:textColor="@color/tint_tab"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilContent"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:boxCornerRadiusBottomEnd="@dimen/input_radius"
+                    app:boxCornerRadiusBottomStart="@dimen/input_radius"
+                    app:boxCornerRadiusTopEnd="@dimen/input_radius"
+                    app:boxCornerRadiusTopStart="@dimen/input_radius">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:gravity="top"
+                        android:hint="문의 내용을 입력해주세요"
+                        android:inputType="textMultiLine"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="* 문의 내용에 대한 답변은 앱 내 알림 또는 이메일로 안내됩니다."
+                    android:textColor="@color/gray6"
+                    android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginHorizontal="@dimen/spacing_md"
+            android:layout_marginBottom="@dimen/spacing_lg"
+            android:enabled="false"
+            android:text="문의하기"
+            android:textSize="16sp"
+            app:backgroundTint="@color/primary_blue"
+            app:cornerRadius="@dimen/button_radius"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <FrameLayout
+            android:id="@+id/loadingOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_alpha_50"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone">
+
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,14 +29,18 @@ class FindPasswordActivity : BaseActivity<ActivityFindPasswordBinding>() {
         with(binding) {
             btnSendEmail.setOnClickListener {
                 val email = etEmail.text.toString()
-                if (email.isNotEmpty()) {
-                    // TODO: 비밀번호 찾기 API 호출
-                    showToast("비밀번호 재설정 이메일을 발송했습니다.")
-                    finish()
+                if (email.isNotEmpty() && isValidEmail(email)) {
+                    // 비밀번호 재설정 화면으로 이동
+                    startActivity(ResetPasswordActivity.createIntent(this@FindPasswordActivity, email))
                 } else {
-                    showToast("이메일을 입력해주세요.")
+                    showToast("올바른 이메일을 입력해주세요.")
                 }
             }
         }
+    }
+
+    private fun isValidEmail(email: String): Boolean {
+        val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
+        return email.matches(emailPattern.toRegex())
     }
 }

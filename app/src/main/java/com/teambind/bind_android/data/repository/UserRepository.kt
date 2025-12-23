@@ -78,7 +78,7 @@ class UserRepository @Inject constructor(
     // 회원 탈퇴
     suspend fun deleteAccount(): Result<Boolean> {
         return try {
-            val response = profileService.deleteAccount()
+            val response = profileService.withdraw()
             if (response.isSuccess) {
                 Result.success(true)
             } else {

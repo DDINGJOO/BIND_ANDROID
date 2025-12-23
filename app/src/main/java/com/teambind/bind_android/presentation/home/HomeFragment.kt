@@ -78,9 +78,21 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
             // 날짜/시간 칩
             val hasDateTime = filter.date != null || filter.startTime != null
-            chipDateTime.text = if (hasDateTime) {
-                filter.date ?: "시간 선택됨"
-            } else "날짜/시간"
+            chipDateTime.text = when {
+                filter.date != null && filter.startTime != null -> {
+                    val datePart = filter.date.substring(5).replace("-", "/")
+                    val startHour = filter.startTime.substringBefore(":").toIntOrNull() ?: 0
+                    val endHour = filter.endTime?.substringBefore(":")?.toIntOrNull() ?: 24
+                    "${datePart} ${startHour}~${endHour}시"
+                }
+                filter.date != null -> filter.date.substring(5).replace("-", "/")
+                filter.startTime != null -> {
+                    val startHour = filter.startTime.substringBefore(":").toIntOrNull() ?: 0
+                    val endHour = filter.endTime?.substringBefore(":")?.toIntOrNull() ?: 24
+                    "${startHour}~${endHour}시"
+                }
+                else -> "날짜/시간"
+            }
             chipDateTime.isChecked = hasDateTime
 
             // 인원 칩
@@ -90,8 +102,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             chipPeople.isChecked = filter.headCount != null
 
             // 키워드 칩
-            chipKeyword.text = if (filter.keywordIds != null) "키워드 선택됨" else "키워드"
-            chipKeyword.isChecked = filter.keywordIds != null
+            val keywordCount = filter.keywordIds?.split(",")?.filter { it.isNotEmpty() }?.size ?: 0
+            chipKeyword.text = if (keywordCount > 0) "키워드 ${keywordCount}개" else "키워드"
+            chipKeyword.isChecked = keywordCount > 0
         }
     }
 
@@ -125,7 +138,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
             // 날짜/시간 필터 칩
             chipDateTime.setOnSingleClickListener {
-                showToast("날짜/시간 선택")
+                showDateTimeFilterBottomSheet()
             }
 
             // 인원 필터 칩
@@ -135,7 +148,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
             // 키워드 필터 칩
             chipKeyword.setOnSingleClickListener {
-                showToast("키워드 선택")
+                showKeywordFilterBottomSheet()
             }
         }
     }
@@ -147,11 +160,32 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         }.show(childFragmentManager, "RegionFilter")
     }
 
+    private fun showDateTimeFilterBottomSheet() {
+        val filter = viewModel.uiState.value.filter
+        DateTimeFilterBottomSheet.newInstance(
+            currentDate = filter.date,
+            currentStartTime = filter.startTime,
+            currentEndTime = filter.endTime
+        ) { selection ->
+            viewModel.updateDateTimeFilter(selection.date, selection.startTime, selection.endTime)
+        }.show(childFragmentManager, "DateTimeFilter")
+    }
+
     private fun showPeopleFilterBottomSheet() {
         val currentCount = viewModel.uiState.value.filter.headCount
         PeopleFilterBottomSheet.newInstance(currentCount) { selectedCount ->
             viewModel.updateHeadCountFilter(selectedCount)
         }.show(childFragmentManager, "PeopleFilter")
+    }
+
+    private fun showKeywordFilterBottomSheet() {
+        val currentKeywordIds = viewModel.uiState.value.filter.keywordIds
+            ?.split(",")
+            ?.mapNotNull { it.toLongOrNull() }
+        KeywordFilterBottomSheet.newInstance(currentKeywordIds) { selectedIds ->
+            val keywordIdsString = if (selectedIds.isEmpty()) null else selectedIds.joinToString(",")
+            viewModel.updateKeywordFilter(keywordIdsString)
+        }.show(childFragmentManager, "KeywordFilter")
     }
 
     private fun setupBanner() {

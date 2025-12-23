@@ -190,4 +190,23 @@ class CommunityRepository @Inject constructor(
             Result.failure(e)
         }
     }
+
+    // 내가 좋아요한 게시글 목록 조회
+    suspend fun getMyLikedArticles(
+        size: Int = 20,
+        cursor: String? = null
+    ): Result<CommunityArticleListResponse> {
+        return try {
+            val response = communityService.getMyLikedArticles(size, cursor)
+            if (response.isSuccess && response.result != null) {
+                // MyFeedResponse를 CommunityArticleListResponse로 변환
+                val pagedList = response.result.toPagedArticleList()
+                Result.success(CommunityArticleListResponse(pagedList))
+            } else {
+                Result.failure(Exception("좋아요한 게시글 조회에 실패했습니다."))
+            }
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
 }

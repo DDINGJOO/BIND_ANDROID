@@ -106,4 +106,40 @@ class SignUpRepository @Inject constructor(
             Result.failure(Exception("회원가입에 실패했습니다. 다시 시도해주세요."))
         }
     }
+
+    // 비밀번호 재설정 (비로그인 상태)
+    suspend fun changePassword(
+        email: String,
+        newPassword: String,
+        newPasswordConfirm: String
+    ): Result<Unit> {
+        return try {
+            val request = mapOf(
+                "email" to email,
+                "newPassword" to newPassword,
+                "newPasswordConfirm" to newPasswordConfirm
+            )
+            val response = signUpService.changePassword(request)
+
+            if (response.isSuccess) {
+                Result.success(Unit)
+            } else {
+                Result.failure(Exception("비밀번호 변경에 실패했습니다."))
+            }
+        } catch (e: HttpException) {
+            val message = when (e.code()) {
+                400 -> "비밀번호 형식이 올바르지 않습니다."
+                404 -> "등록되지 않은 이메일입니다."
+                500, 502, 503 -> "서버에 일시적인 문제가 발생했습니다. 잠시 후 다시 시도해주세요."
+                else -> "비밀번호 변경에 실패했습니다. 다시 시도해주세요."
+            }
+            Result.failure(Exception(message))
+        } catch (e: UnknownHostException) {
+            Result.failure(Exception("인터넷 연결을 확인해주세요."))
+        } catch (e: SocketTimeoutException) {
+            Result.failure(Exception("서버 응답이 없습니다. 잠시 후 다시 시도해주세요."))
+        } catch (e: Exception) {
+            Result.failure(Exception("비밀번호 변경에 실패했습니다. 다시 시도해주세요."))
+        }
+    }
 }

@@ -40,5 +40,11 @@ interface ProfileService {
 
     // 회원 탈퇴 (서버: DELETE /bff/v1/profiles/me)
     @DELETE("profiles/me")
-    suspend fun deleteAccount(): BaseResponse<Boolean>
+    suspend fun withdraw(): BaseResponse<Boolean>
+
+    // 비밀번호 변경 (서버: PUT /bff/v1/profiles/password)
+    @PUT("profiles/password")
+    suspend fun changePassword(
+        @Body request: Map<String, String>
+    ): BaseResponse<Boolean>
 }

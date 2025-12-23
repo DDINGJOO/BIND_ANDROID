@@ -3,6 +3,7 @@ package com.teambind.bind_android.presentation.selecttime
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.teambind.bind_android.data.repository.AuthRepository
 import com.teambind.bind_android.data.repository.PricingPolicyRepository
 import com.teambind.bind_android.data.repository.ReservationRepository
 import com.teambind.bind_android.presentation.selecttime.adapter.TimeSlotItem
@@ -46,12 +47,14 @@ sealed class SelectTimeEvent {
 
     object Dismiss : SelectTimeEvent()
     object ShowUnavailableAlert : SelectTimeEvent()
+    object RequirePhoneVerification : SelectTimeEvent()
 }
 
 @HiltViewModel
 class SelectTimeViewModel @Inject constructor(
     private val reservationRepository: ReservationRepository,
     private val pricingPolicyRepository: PricingPolicyRepository,
+    private val authRepository: AuthRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
@@ -376,6 +379,45 @@ class SelectTimeViewModel @Inject constructor(
     fun onConfirmClick() {
         val currentState = _uiState.value
         if (!currentState.canConfirm) return
+
+        viewModelScope.launch {
+            _uiState.value = currentState.copy(isLoading = true)
+
+            // 먼저 본인인증 상태 확인
+            authRepository.checkPhoneValid()
+                .onSuccess { isVerified ->
+                    if (isVerified) {
+                        // 본인인증 완료 - 예약 진행
+                        proceedWithReservation()
+                    } else {
+                        // 본인인증 필요
+                        _uiState.value = _uiState.value.copy(isLoading = false)
+                        _events.emit(SelectTimeEvent.RequirePhoneVerification)
+                    }
+                }
+                .onFailure { error ->
+                    val message = error.message ?: ""
+                    // 401 에러 또는 인증 필요 메시지인 경우 인증 화면으로 이동
+                    if (message.contains("인증이 필요") || message.contains("401")) {
+                        _uiState.value = _uiState.value.copy(isLoading = false)
+                        _events.emit(SelectTimeEvent.RequirePhoneVerification)
+                    } else {
+                        _uiState.value = _uiState.value.copy(
+                            isLoading = false,
+                            errorMessage = message
+                        )
+                    }
+                }
+        }
+    }
+
+    // 본인인증 완료 후 예약 재시도
+    fun retryReservationAfterVerification() {
+        proceedWithReservation()
+    }
+
+    private fun proceedWithReservation() {
+        val currentState = _uiState.value
 
         // iOS처럼 API 전송용 시간은 HH:mm 형식 (초 제외)
         val selectedTimes = currentState.selectedIndices.sorted().map { index ->

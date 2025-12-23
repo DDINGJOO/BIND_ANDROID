@@ -172,4 +172,10 @@ object NetworkModule {
     fun provideReportService(@Named("base") retrofit: Retrofit): ReportService {
         return retrofit.create(ReportService::class.java)
     }
+
+    @Provides
+    @Singleton
+    fun provideInquiryService(@Named("base") retrofit: Retrofit): InquiryService {
+        return retrofit.create(InquiryService::class.java)
+    }
 }

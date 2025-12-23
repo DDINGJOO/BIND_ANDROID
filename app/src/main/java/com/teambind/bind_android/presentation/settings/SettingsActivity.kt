@@ -46,7 +46,7 @@ class SettingsActivity : BaseActivity<ActivitySettingsBinding>() {
 
             // Change Password
             menuChangePassword.setOnSingleClickListener {
-                showToast("비밀번호 변경 화면으로 이동")
+                startActivity(ChangePasswordActivity.createIntent(this@SettingsActivity))
             }
 
             // Push notification toggle

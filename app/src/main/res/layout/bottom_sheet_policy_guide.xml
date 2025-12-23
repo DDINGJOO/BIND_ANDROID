@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_bottom_sheet"
+              android:orientation="vertical"
+              android:paddingBottom="34dp">
+
+    <!-- Handle -->
+    <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_rounded_rect"/>
+
+    <!-- Header -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="밴더 이용정책"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+
+        <ImageButton
+                android:id="@+id/btnClose"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="닫기"
+                android:src="@drawable/ic_close"/>
+
+    </LinearLayout>
+
+    <!-- Separator -->
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/gray_200"/>
+
+    <!-- Policy Sections -->
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:maxHeight="400dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp">
+
+            <!-- Section 1: 예약 및 결제 -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rounded_gray"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_bold"
+                        android:text="예약 및 결제"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/pretendard_medium"
+                        android:lineSpacingExtra="4dp"
+                        android:text="• 모든 공간은 사전 예약 후 이용 가능합니다.\n• 결제는 플랫폼 내에서만 진행됩니다.\n• 예약 확정 후 변경/취소는 각 공간 정책에 따릅니다.\n• 중복/허위 예약 시 이용이 제한될 수 있습니다."
+                        android:textColor="@color/gray6"
+                        android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <!-- Section 2: 입실 및 이용 규칙 -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_rounded_gray"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_bold"
+                        android:text="입실 및 이용 규칙"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/pretendard_medium"
+                        android:lineSpacingExtra="4dp"
+                        android:text="• 예약 시간에 맞춰 입실/퇴실해 주세요.\n• 정해진 용도에 맞게 사용해 주세요. (무단 상업 사용 금지)\n• 흡연, 음주, 불법 행위는 금지됩니다.\n• 기물 파손/오염 시 손해 배상 책임이 있습니다."
+                        android:textColor="@color/gray6"
+                        android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <!-- Section 3: 플랫폼 운영자 권한 -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_rounded_gray"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_bold"
+                        android:text="플랫폼 운영자 권한"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/pretendard_medium"
+                        android:lineSpacingExtra="4dp"
+                        android:text="• 경고, 이용 제한, 강제 탈퇴 조치를 할 수 있습니다.\n• 신고/문제 발생 시 조사 및 중재를 진행합니다."
+                        android:textColor="@color/gray6"
+                        android:textSize="13sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

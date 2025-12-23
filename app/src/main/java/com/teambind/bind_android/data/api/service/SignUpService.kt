@@ -27,4 +27,10 @@ interface SignUpService {
     suspend fun signUp(
         @Body request: SignUpRequest
     ): BaseResponse<EmptyResult>
+
+    // 비밀번호 재설정 (서버: PUT /bff/v1/auth/password)
+    @PUT("auth/password")
+    suspend fun changePassword(
+        @Body request: Map<String, String>
+    ): BaseResponse<EmptyResult>
 }
